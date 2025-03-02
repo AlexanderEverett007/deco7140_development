@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Alexander Everett</title>
+    </head>
+    <!-- iPhone -->
+    <link rel="apple-touch-icon" sizes="60x60" href="pwa_icons/ios/60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="pwa_icons/ios/120.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="pwa_icons/ios/180.png" />
+
+    <!-- iPad -->
+    <link rel="apple-touch-icon" sizes="76x76" href="pwa_icons/ios/76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="pwa_icons/ios/152.png" />
+
+    <!-- iPad Pro -->
+    <link rel="apple-touch-icon" sizes="167x167" href="pwa_icons/ios/167.png" />
+
+    <!-- Standard favicons -->
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="pwa_icons/ios/16.png"
+    />
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="pwa_icons/ios/32.png"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <body>
+        <h1>Alexander Everett's Home Page</h1>
+        <article>
+            <h2>About Me</h2>
+            <p>
+                I am a master candidate who major in Information Technology at
+                the University of Queensland.
+            </p>
+            <p>
+                I come from Canton City. I just gained a bachelor's degree of
+                public finance. Learning IT is one of my dream when I was young,
+                so this is the reason that why I come here. Glad to see all of
+                you.
+            </p>
+        </article>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker
+                    .register("/pwa_service_worker/service-worker.js")
+                    .then((registration) => {
+                        console.log("Service Worker registered:", registration);
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Service Worker registration failed:",
+                            error
+                        );
+                    });
+            }
+        </script>
+    </body>
+</html>
