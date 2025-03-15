@@ -50,11 +50,20 @@
             <section>
                 <h2>Links</h2>
                 <a class="button button-primary" href="index.html">WP1 Home</a>
-                <a class="button button-secondary" href="typography.html">Style Guide - Typography</a>
+                <a class="button button-secondary" href="typography.html"
+                    >Style Guide - Typography</a
+                >
             </section>
         </div>
 
-        <!-- Linking External JavaScript -->>
+        <!-- Linking External JavaScript -->
         <script type="module" src="js/components.js"></script>
+
+        <!-- Temperature Widget Container -->
+        <div id="temperature-widget" class="temperature-widget">
+            <p>Current Temperature: <span id="temperature-value">--</span>°C</p>
+        </div>
+        <!-- Linking to External JavaScript -->
+        <script type="module" src="js/modules/temperature.js"></script>
     </body>
 </html>

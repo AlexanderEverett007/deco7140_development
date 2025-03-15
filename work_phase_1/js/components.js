@@ -29,4 +29,5 @@ let message = "Page has fully loaded";
 //when the page fully loads
 window.addEventListener("load", () => {
     logMessage(PAGE_NAME, message);
+    fetchTemperature(); /* new */
 });
