@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const temperatureValue = document.getElementById("temperature-value");
 
     if (!temperatureValue) {
-        console.error("❌ Error: temperature-value element not found!");
+        console.error(" Error: temperature-value element not found!");
         return;
     }
 
