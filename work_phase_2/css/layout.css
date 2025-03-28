@@ -1,0 +1,20 @@
+/* layout.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    background-color: #a0e99f; /* Green Background */
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
