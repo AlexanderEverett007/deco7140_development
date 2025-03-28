@@ -4,7 +4,7 @@
     --secondary-color: #3498db; /* Bright Blue - for hover, accents */
     --accent-color: #e74c3c; /* Red - for warnings or highlights */
     --text-color: #333; /* Dark Gray - for body text */
-    --background-color: #a0e99f; /* Light Green - body background */
+    --background-color: #ffccd5; /* Light Green - body background */
     --container-bg-color: #ffffff; /* White - container background */
 }
 
@@ -12,17 +12,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: start;
-    min-height: 100vh;
-    background-color: #a0e99f; /* Green Background */
+    min-height: 100%;
+    background-color: var(--background-color);
     padding: 2rem;
     font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-attachment: scroll; /* optional: allow normal scroll */
 }
 
 .container {
     max-width: 900px;
     width: 100%;
-    background-color: white;
+    background-color: var(--container-bg-color);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }

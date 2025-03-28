@@ -1,0 +1,122 @@
+/* INTERACTIVE HIGHLIGHTING */
+
+/* Base Highlight Style */
+.interactive-highlight {
+    position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
+    background-color: rgba(
+        255,
+        215,
+        0,
+        0.3
+    ); /* Light yellow highlight with 30% transparency */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+    padding: 2px 5px; /* Adds small space inside the highlight for better readability */
+    border-radius: 5px; /* Rounds the corners slightly for a softer look */
+    transition: background 0.3s ease; /* Smooth transition effect when background changes */
+}
+
+/* Tooltip Styling for Highlighted Text */
+.interactive-highlight::after {
+    content: attr(
+        data-card
+    ); /* Shows the content of the custom data attribute */
+    position: absolute; /* Positions the tooltip relative to the highlighted text */
+    top: -5px; /* Moves the tooltip slightly above the highlighted text */
+    right: -15px; /* Moves the tooltip slightly to the right of the highlighted text */
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 120px; /* Sets a fixed width for the tooltip */
+    height: 30px; /* Sets a fixed height, making the tooltip a perfect circle */
+    display: flex; /* Uses Flexbox to center the text inside the circle */
+    align-items: center; /* Vertically centers the text inside the tooltip */
+    justify-content: center; /* Horizontally centers the text inside the tooltip */
+    border-radius: 10%; /* Creates rounded corners */
+    opacity: 0; /* Initially hides the tooltip */
+    transition: opacity 0.3s ease; /* Smoothly fades in the tooltip */
+}
+
+/* Show Tooltip on Hover (Desktop) */
+@media (hover: hover) {
+    .interactive-highlight:hover::after {
+        opacity: 1;
+    }
+}
+
+/* Show Tooltip on Tap (Mobile) */
+.interactive-highlight:focus::after,
+.interactive-highlight:active::after {
+    opacity: 1;
+}
+
+.value-box {
+    background-color: var(--container-bg-color);
+    border: 1px solid #b6d4fe;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 默认一列（移动端） */
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .flip-card-container {
+        grid-template-columns: repeat(3, 1fr); /* 桌面端三列 */
+    }
+}
+
+.flip-card {
+    width: 100%;
+    height: 180px;
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 翻转效果：hover 或键盘聚焦时翻转 */
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+    background-color: #e3f2fd;
+}
+
+.flip-card-back {
+    background-color: #90caf9;
+    color: white;
+    transform: rotateY(180deg);
+}
