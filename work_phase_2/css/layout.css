@@ -1,4 +1,12 @@
-/* layout.css */
+/* Define global color variables */
+:root {
+    --primary-color: #2c3e50; /* Dark Blue - for titles, buttons */
+    --secondary-color: #3498db; /* Bright Blue - for hover, accents */
+    --accent-color: #e74c3c; /* Red - for warnings or highlights */
+    --text-color: #333; /* Dark Gray - for body text */
+    --background-color: #a0e99f; /* Light Green - body background */
+    --container-bg-color: #ffffff; /* White - container background */
+}
 
 body {
     display: flex;
