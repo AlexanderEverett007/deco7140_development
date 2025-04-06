@@ -9,8 +9,8 @@
     font: inherit;
     vertical-align: baseline;
     background: none;
-    animation: none !important;
-    transition: none !important;
+    animation: none;
+    transition: none;
     outline: none;
 }
 

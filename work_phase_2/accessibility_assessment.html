@@ -13,14 +13,173 @@
         <title>Accessibility_assessment</title>
     </head>
     <body>
-        <div class="container">
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="../index.html" aria-current="page">Home Page</a></li> 
+                <li><a href="index.html" aria-current="page">Home of Work Phase 2</a></li>
+                <li>
+                    <a href="client_needs_analysis.html">Client Needs</a>
+                </li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a href="accessibility_assessment.html">Accessibility</a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+                <li>
+                    <a href="ethics_analysis.html">Ethics Analysis</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container accessibility-content">
             <header>
-                <h1>Alexander Everett's Work Phase 2</h1>
+                <h1>Accessibility</h1>
             </header>
-            <section>
-                <h2>What's in this website?</h2>
-                <p>This is the accessibility_assessment.</p>
+
+            <section class="accessibility-box">
+                <h2>Overview of WCAG Principles</h2>
+                <p>
+                    This website is developed in alignment with the WCAG 2.2
+                    guidelines to ensure accessibility, inclusivity, and
+                    usability for users with diverse needs. It focuses on the
+                    following principles:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Perceivable:</strong> Content must be presented
+                        in ways that users can perceive.
+                    </li>
+                    <li>
+                        <strong>Operable:</strong> Interface components must be
+                        operable via different input methods.
+                    </li>
+                    <li>
+                        <strong>Understandable:</strong> Information and UI must
+                        be easy to understand and use.
+                    </li>
+                    <li>
+                        <strong>Robust:</strong> Content must be compatible with
+                        assistive technologies.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="accessibility-box">
+                <h2>Relevant Success Criteria & Client/User Needs</h2>
+                <p>
+                    Based on the client brief and user interviews (Aisha, David,
+                    Lily), we identified the following relevant success
+                    criteria:
+                </p>
+
+                <h3>1.1.1 Alternative Text for Non-Text Content</h3>
+                <p>
+                    Helps users like Aisha, who benefit from visual cues due to
+                    limited English proficiency. Alternative text ensures icons
+                    and images are meaningful and accessible.
+                </p>
+
+                <h3>1.3.2 Meaningful Sequence</h3>
+                <p>
+                    Ensures that content is presented in a logical order for
+                    screen readers, supporting Aisha's need for simplified,
+                    non-overwhelming content.
+                </p>
+
+                <h3>1.4.3 Perceivable Text Contrast</h3>
+                <p>
+                    Ensures readability across different devices, especially
+                    helpful for users like Lily who access the site on mobile
+                    with limited lighting conditions.
+                </p>
+
+                <h3>1.4.4 Resize Text without Loss</h3>
+                <p>
+                    Supports users with limited literacy or vision by allowing
+                    zooming without breaking the layout, improving usability
+                    across all demographics.
+                </p>
+
+                <h3>2.1.1 Keyboard Navigability</h3>
+                <p>
+                    Essential for mobile navigation and low-tech users like
+                    Aisha, who use only a phone and need intuitive tab-based
+                    access.
+                </p>
+
+                <h3>2.4.7 Focus Visible</h3>
+                <p>
+                    Highlights navigation focus for users with limited technical
+                    literacy, enhancing clarity when browsing with a keyboard or
+                    screen reader.
+                </p>
+
+                <h3>3.1.5 Reading Level</h3>
+                <p>
+                    Ensures that text is understandable for non-native speakers
+                    like Aisha and Lily by using plain language and avoiding
+                    jargon.
+                </p>
+
+                <h3>3.2.3 Consistent Navigation</h3>
+                <p>
+                    Reduces confusion for users like David who value
+                    professionalism and clarity in layout and interaction.
+                </p>
+
+                <h3>3.2.4 Consistent Identification (Layout & UI Behaviour)</h3>
+                <p>
+                    Ensures familiar interactions throughout the site, which is
+                    critical for trust-building as mentioned by both Lily and
+                    David.
+                </p>
+
+                <h3>3.3.2 Labels & Instructions</h3>
+                <p>
+                    Supports input clarity for newcomers like Aisha, ensuring
+                    forms and UI elements are labeled with clear instructions to
+                    avoid confusion.
+                </p>
+            </section>
+
+            <section class="accessibility-box">
+                <h2>Rationale</h2>
+                <p>
+                    The selected criteria reflect the mission of the Connect
+                    Communities Initiative by promoting inclusion, clarity, and
+                    accessibility. Each guideline directly supports the needs of
+                    specific users:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Aisha:</strong> Benefits from clean UI, visual
+                        cues, text alternatives, and low reading level content.
+                    </li>
+                    <li>
+                        <strong>David:</strong> Needs professional, consistent
+                        design with intuitive navigation and accessible forms.
+                    </li>
+                    <li>
+                        <strong>Lily:</strong> Requires a mobile-friendly design
+                        with high contrast, readable layout, and simple,
+                        trustable content.
+                    </li>
+                </ul>
+                <p>
+                    Meeting these criteria enables the website to be accessible,
+                    trustworthy, and usable for the targeted community groups.
+                </p>
             </section>
         </div>
+
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/accessibility_assessment.js"></script>
     </body>
 </html>

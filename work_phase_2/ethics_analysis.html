@@ -13,14 +13,114 @@
         <title>Ethics_analysis</title>
     </head>
     <body>
-        <header>
-            <h1>Alexander's Work Phase 2</h1>
-        </header>
-        <section>
-            <h2>What's in this website?</h2>
-            <p>
-                This is the ethics_analysis.
-            </p>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="../index.html" aria-current="page">Home Page</a></li> 
+                <li><a href="index.html" aria-current="page">Home of Work Phase 2</a></li>
+                <li>
+                    <a href="client_needs_analysis.html">Client Needs</a>
+                </li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a href="accessibility_assessment.html">Accessibility</a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+                <li>
+                    <a href="ethics_analysis.html">Ethics Analysis</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="ethics-section">
+            <h2>📘 Identify Potential Harms</h2>
+            <div class="card">
+                <h3>
+                    ⚠️ Potential Risks of the Newsletter Subscription Feature:
+                </h3>
+                <ul>
+                    <li>Unintentional data disclosure or privacy violation.</li>
+                    <li>Lack of informed consent when collecting user data.</li>
+                    <li>Users unaware of how their data is used.</li>
+                </ul>
+                <details>
+                    <summary>
+                        <strong>Key Questions to Consider</strong>
+                    </summary>
+                    <ul>
+                        <li>
+                            What kind of data will be collected during signup?
+                        </li>
+                        <li>Is the data shared with third parties?</li>
+                        <li>
+                            How clearly is data usage communicated to users?
+                        </li>
+                    </ul>
+                </details>
+            </div>
         </section>
+
+        <section class="ethics-section">
+            <h2>🧭 ACS Values & Principles → Solutions</h2>
+            <div class="card">
+                <h3>📄 Related ACS Values</h3>
+                <ul>
+                    <li>
+                        <strong>Honesty</strong>: Be clear about what data is
+                        collected.
+                    </li>
+                    <li>
+                        <strong>Respect</strong>: Respect users' privacy
+                        preferences.
+                    </li>
+                    <li>
+                        <strong>Trustworthiness</strong>: Build user confidence
+                        through transparency.
+                    </li>
+                </ul>
+                <h3>🔗 Principles for Action</h3>
+                <p>
+                    <strong>Minimise harm</strong> by collecting minimal,
+                    necessary data only.
+                </p>
+                <p>
+                    <strong>Enhance quality of life</strong> by making users
+                    feel secure and in control.
+                </p>
+                <p>
+                    <strong>Public interest first</strong>: Prioritise
+                    transparency and ethical design.
+                </p>
+            </div>
+        </section>
+
+        <section class="ethics-section">
+            <h2>🛠️ Managing Tensions</h2>
+            <div class="card">
+                <h3>💡 How to Balance Ethics & Client Needs?</h3>
+                <ul>
+                    <li>Client wants email reach ✓</li>
+                    <li>User fears data misuse ✗</li>
+                </ul>
+                <p>
+                    <strong>Resolution:</strong> Provide a clear opt-in
+                    checkbox, plain-language explanation, and option to
+                    unsubscribe anytime.
+                </p>
+                <blockquote>
+                    Ethical design means giving users real choice and
+                    understanding.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/ethics_analysis.js"></script>
     </body>
 </html>

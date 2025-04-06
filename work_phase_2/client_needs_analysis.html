@@ -10,22 +10,47 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
 
-        <title>WP2 – Client Needs Analysis</title>
+        <title>WP2 - Client Needs Analysis</title>
     </head>
     <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="../index.html" aria-current="page">Home Page</a></li> 
+                <li><a href="index.html" aria-current="page">Home of Work Phase 2</a></li>
+                <li>
+                    <a href="client_needs_analysis.html">Client Needs</a>
+                </li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a href="accessibility_assessment.html">Accessibility</a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+                <li>
+                    <a href="ethics_analysis.html">Ethics Analysis</a>
+                </li>
+            </ul>
+        </nav>
+
         <div class="container">
             <header>
-                <h3>WP2 – Client Needs Analysis</h3>
+                <h3>WP2 - Client Needs Analysis</h3>
             </header>
 
             <section>
                 <h2>The Client Brief</h2>
 
-                <!-- Add formatted client brief HTML content here -->
+                <section class="theme-section">
                 <h3>About Us</h3>
                 <p>
                     We are a non-profit organisation dedicated to fostering
-                    <span class="interactive-highlight" data-card="Value 1"
+                    <span class="interactive-highlight" data-card="Unity"
                         >social cohesion</span
                     >
                     by empowering diverse communities to share their stories,
@@ -39,11 +64,14 @@
                     This brief has been prepared for the internal design teams
                     at Connect Communities Initiative (CCI). Each design team is
                     tasked with developing individual concepts and prototypes
-                    for dynamic websites that align with CCI’s mission and
+                    for dynamic websites that align with CCI's mission and
                     vision. Our mission is to strengthen societal bonds by
                     creating platforms that celebrate and support the unique
                     identities of communities across Australia.
                 </p>
+            </section>
+
+            <section class="theme-section">
                 <h3>Project Overview</h3>
                 <p>
                     We are commissioning the development of dynamic,
@@ -64,6 +92,9 @@
                     celebrate the unique characteristics of its chosen community
                     and support meaningful interaction and engagement.
                 </p>
+            </section>
+
+            <section class="theme-section">
                 <h3>Community Focus Areas</h3>
                 <ul>
                     <li>Cultural and Heritage Communities</li>
@@ -76,6 +107,9 @@
                     <li>Food and Culinary Communities</li>
                     <li>Tech and Innovation Communities</li>
                 </ul>
+            </section>
+
+            <section class="theme-section">
                 <h3>Additional Information</h3>
                 <p><strong>Target Audience</strong></p>
                 <p>Each website must serve two key groups:</p>
@@ -119,7 +153,7 @@
             </section>
 
             <section>
-                <h2>Values – Needs – Features Analysis</h2>
+                <h2>Values - Needs - Features Analysis</h2>
                 <div class="value-box">
                     <h3>Value 1: Promote Community Engagement</h3>
                     <div class="flip-card-container">
@@ -193,5 +227,8 @@
                 </div>
             </section>
         </div>
+
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/client_needs_analysis.js"></script>
     </body>
 </html>

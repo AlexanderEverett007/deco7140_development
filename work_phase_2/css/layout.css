@@ -9,8 +9,8 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     align-items: start;
     min-height: 100%;
     background-color: var(--background-color);
@@ -20,11 +20,173 @@ body {
     background-attachment: scroll; /* optional: allow normal scroll */
 }
 
+/* Make sure the container is centered, has a maximum width, and internal padding. */
 .container {
-    max-width: 900px;
-    width: 100%;
-    background-color: var(--container-bg-color);
+    max-width: 960px;
+    margin: 0 auto; /* center horizontally */
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /*background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
+}
+
+:root {
+    --space-0: 0;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+}
+
+/*Separate the character introduction from the interview content.*/
+.bio {
+    background-color: #fdf2f2; /* Light pink*/
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/*Bold the problem text*/
+.question {
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); 
+    display: block;
+}
+
+.interview {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/*just for the page of accessibility*/
+.accessibility-content section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/*just for the page of accessibility*/
+.accessibility-box {
+    background-color: #e0f0ff; /* 柔和蓝色背景 */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* === MARGIN CLASSES === */
+
+/* All sides */
+.m-0 {
+    margin: var(--space-0);
+}
+.m-1 {
+    margin: var(--space-1);
+}
+.m-2 {
+    margin: var(--space-2);
+}
+.m-3 {
+    margin: var(--space-3);
+}
+.m-4 {
+    margin: var(--space-4);
+}
+.m-5 {
+    margin: var(--space-5);
+}
+
+/* Individual sides */
+.m-t-0 {
+    margin-top: var(--space-0);
+}
+.m-t-1 {
+    margin-top: var(--space-1);
+}
+.m-t-2 {
+    margin-top: var(--space-2);
+}
+.m-t-3 {
+    margin-top: var(--space-3);
+}
+.m-t-4 {
+    margin-top: var(--space-4);
+}
+.m-t-5 {
+    margin-top: var(--space-5);
+}
+
+.m-b-0 {
+    margin-bottom: var(--space-0);
+}
+.m-b-1 {
+    margin-bottom: var(--space-1);
+}
+/* ... */
+
+.m-s-1 {
+    margin-inline-start: var(--space-1);
+}
+.m-e-1 {
+    margin-inline-end: var(--space-1);
+}
+
+.m-x-1 {
+    margin-left: var(--space-1);
+    margin-right: var(--space-1);
+}
+.m-y-1 {
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-1);
+}
+
+/* === PADDING CLASSES === */
+
+.p-0 {
+    padding: var(--space-0);
+}
+.p-1 {
+    padding: var(--space-1);
+}
+/* ... */
+
+.p-t-1 {
+    padding-top: var(--space-1);
+}
+.p-b-1 {
+    padding-bottom: var(--space-1);
+}
+
+.p-s-1 {
+    padding-inline-start: var(--space-1);
+}
+.p-e-1 {
+    padding-inline-end: var(--space-1);
+}
+
+.p-x-1 {
+    padding-left: var(--space-1);
+    padding-right: var(--space-1);
+}
+
+.p-x-3 {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+}
+
+.p-x-5 {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+}
+
+.p-y-1 {
+    padding-top: var(--space-1);
+    padding-bottom: var(--space-1);
 }
