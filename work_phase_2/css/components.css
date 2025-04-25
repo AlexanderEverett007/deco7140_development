@@ -1,63 +1,158 @@
 /* for Client Needs Analysis */
 .theme-section {
-    background-color: #fff5f5; /* 淡粉色分区背景 */
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff5f5; /* Light pink section background 淡粉色分区背景 */
+    padding: 1.5rem;/* Padding inside the element: 1.5rem 内边距：1.5rem（元素内容与边框之间的距离） */
+    margin-bottom: 2rem;/* Space below the element: 2rem 下外边距：2rem（元素与下方内容的间距） */
+    border-radius: 12px;/* Rounded corners: 12px radius 边框圆角半径：12 像素 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);/* Shadow: 2px down, 6px blur, light transparent black 阴影：向下偏移 2px，模糊度 6px，颜色为轻微黑透明 */
 }
 
-/* for Client Needs Analysis */ /* Base Highlight Style */
+/* for Client Needs Analysis */ 
+/* Base Highlight Style */
 .interactive-highlight {
-    position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
+    position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) 设置相对定位，方便内部放绝对定位元素（例如提示小气泡）*/
     background-color: rgba(
         255,
         215,
         0,
         0.3
-    ); /* Light yellow highlight with 30% transparency */
-    cursor: pointer; /* Changes cursor to indicate interactivity */
-    padding: 2px 5px; /* Adds small space inside the highlight for better readability */
-    border-radius: 5px; /* Rounds the corners slightly for a softer look */
-    transition: background 0.3s ease; /* Smooth transition effect when background changes */
+    ); /* Light yellow highlight with 30% transparency 设置背景色为浅黄色，并有30%的透明度 */
+    cursor: pointer; /* Changes cursor to indicate interactivity 鼠标悬停时变成手型，表示可点击或可交互 */
+    padding: 2px 5px; /* Adds small space inside the highlight for better readability 上下内边距 2px，左右内边距 5px，增加内容和边框的间距*/
+    border-radius: 5px; /* Rounds the corners slightly for a softer look 圆角边框，弯曲程度为5px，视觉更柔和*/
+    transition: background 0.3s ease; /* Smooth transition effect when background changes 当背景色变化时，平滑过渡，持续 0.3 秒*/
 }
 
+/* for Client Needs Analysis */
 /* Tooltip Styling for Highlighted Text */
 .interactive-highlight::after {
     content: attr(
         data-card
-    ); /* Shows the content of the custom data attribute */
-    position: absolute; /* Positions the tooltip relative to the highlighted text */
-    top: -5px; /* Moves the tooltip slightly above the highlighted text */
-    right: -15px; /* Moves the tooltip slightly to the right of the highlighted text */
-    background: var(--accent-color);
-    color: white;
+    ); /* Shows the content of the custom data attribute 显示自定义 data-card 属性中的内容*/
+    position: absolute; /* Positions the tooltip relative to the highlighted text 设置绝对定位，相对于高亮元素定位*/
+    top: -5px; /* Moves the tooltip slightly above the highlighted text 向上移动 5px，让提示框略高于文字*/
+    right: -15px; /* Moves the tooltip slightly to the right of the highlighted text 向右移动 15px，让提示框偏离文字右侧*/
+    background: var(--accent-color); /* 使用 CSS 变量设置背景色 */
+    color: white; /* 设置文字颜色为白色 */
     font-size: 0.8rem;
     font-weight: bold;
     width: 120px; /* Sets a fixed width for the tooltip */
     height: 30px; /* Sets a fixed height, making the tooltip a perfect circle */
-    display: flex; /* Uses Flexbox to center the text inside the circle */
-    align-items: center; /* Vertically centers the text inside the tooltip */
-    justify-content: center; /* Horizontally centers the text inside the tooltip */
-    border-radius: 10%; /* Creates rounded corners */
-    opacity: 0; /* Initially hides the tooltip */
-    transition: opacity 0.3s ease; /* Smoothly fades in the tooltip */
+    display: flex; /* Uses Flexbox to center the text inside the circle 使用 Flex 布局来居中提示框文字*/
+    align-items: center; /* Vertically centers the text inside the tooltip 垂直方向居中*/
+    justify-content: center; /* Horizontally centers the text inside the tooltip 水平方向居中*/
+    border-radius: 10%; /* Creates rounded corners 设置圆角为 10%（使框更圆润）*/
+    opacity: 0; /* Initially hides the tooltip 默认隐藏提示框*/
+    transition: opacity 0.3s ease; /* Smoothly fades in the tooltip 当显示时让提示框以 0.3 秒淡入出现*/
 }
 
-/* Show Tooltip on Hover (Desktop) */
+/* for Client Needs Analysis */
+/* Show Tooltip on Hover (Desktop) 鼠标悬停时显示提示框（仅适用于桌面设备）*/
 @media (hover: hover) {
     .interactive-highlight:hover::after {
-        opacity: 1;
+        opacity: 1;  /* Fully visible 完全不透明（可见）*/
     }
 }
 
-/* Show Tooltip on Tap (Mobile) */
+/* for Client Needs Analysis */
+/* Show Tooltip on Tap (Mobile) 点击或按压时显示提示框（适用于移动设备）*/
 .interactive-highlight:focus::after,
 .interactive-highlight:active::after {
-    opacity: 1;
+    opacity: 1; /* Fully visible 完全不透明（可见）*/
 }
 
-/* for USER STORIES */ /* INTERACTIVE HIGHLIGHT – USER STORIES */
+
+/* for Client Needs Analysis */
+.value-box {
+    background-color: var(--container-bg-color); /* 使用 CSS 变量设置背景颜色  Set background color using CSS variable */
+    border: 1px solid #b6d4fe; /* 设置边框为 1 像素的实线，颜色为浅蓝色  1px solid border with light blue color */
+    border-radius: 8px; /* 边框圆角半径为 8px，使盒子有圆润感  Rounded corners with 8px radius */
+    padding: 1rem; /* 内边距为 1rem，元素内容与边框之间留出空间  Space inside the box */
+    margin-bottom: 1.5rem; /* 下外边距为 1.5rem，元素之间保持垂直距离  Space below the box */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* 阴影：右下偏移 2px，模糊度 8px，颜色为浅黑透明 / Subtle shadow for depth */
+}
+
+
+/* for Client Needs Analysis */
+/*The parent container is responsible for arranging how the cards are laid out on the page.父容器，负责安排卡片在页面上如何排列*/
+.flip-card-container {
+    display: grid; /* Use CSS Grid layout  使用 CSS 网格布局 */
+    grid-template-columns: 1fr; /* One column layout taking full width (good for mobile)  默认一列，占满全部宽度（适合移动端） */
+    gap: 20px;  /* Spacing between grid items  网格项之间的间距 */
+    padding: 20px; /* Inner space between content and container border  容器内容与边框之间的内边距 */
+}
+
+/* for Client Needs Analysis */
+@media (min-width: 768px) { /* Applies styles when screen width is 768px or more  当屏幕宽度 ≥ 768px 时生效（平板及以上） */
+    .flip-card-container {
+        grid-template-columns: repeat(3, 1fr); /* Set 3 equal-width grid columns for desktop layout  设置为 3 列网格，每列平均分宽度 1fr（桌面端三列） */
+    }
+}
+
+
+/* for Client Needs Analysis */
+/* Define the outer container of a 3D flip card设置 3D 翻转卡片的外层容器*/
+/*The outer .flip-card is the "controller" that provides stable perspective and center for the rotation!*/
+.flip-card {
+    width: 100%;
+    height: 180px;
+    perspective: 1000px;  /* Define the 3D perspective distance for child elements  设置 3D 透视距离，让卡片翻转有立体感 */
+    cursor: pointer; /* Change cursor to a hand to indicate interactivity  鼠标悬停时显示为手型，表示可点击 */
+    outline: none; /* Remove default focus outline  移除点击时出现的外边框（默认轮廓线） */
+}
+
+/* for Client Needs Analysis */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Use relative positioning for front/back layers  使用相对定位，以便前后面可以绝对定位 */
+    transform-style: preserve-3d;/* Enable 3D space for children elements，allow child elements to exhibit flipping along the Z-axis. 启用 3D 效果，允许子元素在 Z 轴上表现翻转 */
+    transition: transform 0.5s ease-in-out; /* Smoothly animate transform over 0.5 seconds  平滑地过渡 transform 效果，持续 0.5 秒 */
+}
+
+/* for Client Needs Analysis */
+/* Flip effect: Flips when hovered over or focused on with the keyboard. */
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg); /* Rotate the inner card 180 degrees on Y axis  沿 Y 轴旋转 180 度 */
+}
+
+/* for Client Needs Analysis */
+.flip-card-front,
+.flip-card-back {
+    position: absolute; /* Position inside flip-card-inner absolutely  在 .flip-card-inner 内部绝对定位叠在一起 */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the backside when rotated  背面旋转到正面时隐藏不显示 */
+    display: flex; /* Use Flexbox to align content  使用 Flex 布局对齐内容 */
+    flex-direction: column; /* Stack children vertically  子元素垂直排列 */
+    align-items: center; /* Center content horizontally  水平居中 */
+    justify-content: center; /* Center content vertically  垂直居中 */
+    text-align: center; /* Center text inside  文本居中 */
+    border-radius: 10px; /* Rounded corners for smoother look  圆角边框，更加美观 */
+    padding: 10px; /* Add padding inside the card  内部留白 10px */
+    font-size: 1rem; /* Set text size to 1rem  设置字体大小为 1rem */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth  添加轻微阴影，增加立体感 */
+}
+
+/* for Client Needs Analysis */
+.flip-card-front {
+    background-color: #e3f2fd;
+}
+
+/* for Client Needs Analysis */
+.flip-card-back {
+    background-color: #90caf9;
+    color: white;
+    transform: rotateY(180deg);/*In fact, the back is also pasted upright, not like how we usually stick stickers with the sticky side facing in and the printed side facing out.其实背面也是正着贴，也就是字朝着墙，并不是像我们日常贴贴纸一样胶面朝墙字面朝外*/
+}
+
+
+
+
+
+/* for USER STORIES */ 
+/* INTERACTIVE HIGHLIGHT – USER STORIES */
 .interactive-highlight-stories {
     position: relative;
     background-color: rgba(255, 215, 0, 0.3); /* 浅黄色背景 */
@@ -67,7 +162,8 @@
     transition: background 0.3s ease;
 }
 
-/* Tooltip Styling for Highlighted User Stories Text */
+/* for User Stories*/
+/* Tooltip Styling for Highlighted Text */
 .interactive-highlight-stories::after {
     content: attr(data-userstory); /* get the correct information */
     position: absolute;
@@ -101,6 +197,7 @@
     opacity: 1;
 }
 
+
 /* USER STORY BOX */
 .user-story-box {
     background-color: var(--container-bg-color);
@@ -115,12 +212,15 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Hover 效果 */
 }
 
-/* just for ethics analysis*/
+
+
+
+/* for ethics analysis*/
 .ethics-section {
     margin-bottom: 2rem;
 }
 
-/* just for ethics analysis*/
+/* for ethics analysis*/
 .card {
     background-color: #f8f9fb;
     border-radius: 10px;
@@ -128,18 +228,18 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* just for ethics analysis*/
+/* for ethics analysis*/
 .card h3 {
     margin-top: 0.5rem;
 }
 
-/* just for ethics analysis*/
+/* for ethics analysis*/
 details summary {
     cursor: pointer;
     margin-top: 0.5rem;
 }
 
-/* just for ethics analysis*/
+/* for ethics analysis*/
 blockquote {
     background: #eef6ff;
     border-left: 5px solid #3399ff;
@@ -148,6 +248,8 @@ blockquote {
     font-style: italic;
     color: #333;
 }
+
+
 
 /*for gen AI and machine translation*/
 .genai-section {
@@ -186,6 +288,8 @@ blockquote {
     line-height: 1.6;
 }
 
+
+
 /* for index welcome */
 .welcome-banner-text {
     text-align: center;
@@ -199,6 +303,7 @@ blockquote {
     animation: fadeIn 1.2s ease-in-out;
 }
 
+/* for index welcome */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -209,6 +314,8 @@ blockquote {
         transform: translateY(0);
     }
 }
+
+
 
 /* NAVBAR */
 .navbar {
@@ -275,76 +382,7 @@ blockquote {
     }
 }
 
-.value-box {
-    background-color: var(--container-bg-color);
-    border: 1px solid #b6d4fe;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
 
-.flip-card-container {
-    display: grid;
-    grid-template-columns: 1fr; /* 默认一列（移动端） */
-    gap: 20px;
-    padding: 20px;
-}
-
-@media (min-width: 768px) {
-    .flip-card-container {
-        grid-template-columns: repeat(3, 1fr); /* 桌面端三列 */
-    }
-}
-
-.flip-card {
-    width: 100%;
-    height: 180px;
-    perspective: 1000px;
-    cursor: pointer;
-    outline: none;
-}
-
-.flip-card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* 翻转效果：hover 或键盘聚焦时翻转 */
-.flip-card:hover .flip-card-inner,
-.flip-card:focus .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.flip-card-front {
-    background-color: #e3f2fd;
-}
-
-.flip-card-back {
-    background-color: #90caf9;
-    color: white;
-    transform: rotateY(180deg);
-}
 
 a[aria-current="page"] {
     font-weight: bold;
