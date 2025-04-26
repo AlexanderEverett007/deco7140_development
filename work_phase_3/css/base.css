@@ -1,0 +1,115 @@
+/* ======================
+    DEFINE COLOUR VARIABLES
+   ====================== */
+:root {
+    --primary-color: #6a9fb5;
+    --accent-color: #c9b6e4;
+    --background-color:#EAFBE6;
+    --text-color: #333333;
+}
+
+/* Apply Oswald font globally */
+body {
+    font-family: "Oswald", sans-serif; /* Use the Oswald font, with sans-serif as the fallback font.使用 Oswald 字体，sans-serif 作为备用字体 */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Default styles (Mobile First) */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6; /* Improve readability 增加行间距 */
+    margin-bottom: 1rem; /* Add space between paragraphs 增加段落间距 */
+    color: var(--text-color); 
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* ======================
+    HELPER CLASSES
+    辅助类工具样式
+   ====================== */
+
+/* Margin helpers 外边距辅助类 */
+.mt-1 {
+    margin-top: 1rem;
+} /* Top margin 顶部外边距 */
+.mb-1 {
+    margin-bottom: 1rem;
+} /* Bottom margin 底部外边距 */
+.ml-1 {
+    margin-left: 1rem;
+} /* Left margin 左侧外边距 */
+.mr-1 {
+    margin-right: 1rem;
+} /* Right margin 右侧外边距 */
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} /* Vertical margin 垂直方向外边距 */
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+} /* Horizontal margin 水平方向外边距 */
+.m-1 {
+    margin: 1rem;
+} /* All sides margin 全部方向外边距 */
+
+/* Padding helpers 内边距辅助类 */
+.pt-1 {
+    padding-top: 1rem;
+} /* Top padding 顶部内边距 */
+.pb-1 {
+    padding-bottom: 1rem;
+} /* Bottom padding 底部内边距 */
+.pl-1 {
+    padding-left: 1rem;
+} /* Left padding 左侧内边距 */
+.pr-1 {
+    padding-right: 1rem;
+} /* Right padding 右侧内边距 */
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+} /* Vertical padding 垂直方向内边距 */
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+} /* Horizontal padding 水平方向内边距 */
+.p-1 {
+    padding: 1rem;
+} /* All sides padding 全部方向内边距 */
