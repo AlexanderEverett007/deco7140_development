@@ -1,0 +1,79 @@
+@import '../component_skeletons/accordion.css';
+
+
+
+/* MENUS */
+/* Base styles */
+nav ul {
+    display: flex; /* Make menu a flex container 让菜单变成弹性盒子 */
+    flex-direction: row; /* Align items horizontally 横向排列 */
+    justify-content: space-around; /* Even spacing between items 平均分布 */
+    list-style: none; /* Remove bullet points 移除默认小圆点 */
+    padding: 0; /* Remove padding 移除内边距 */
+    margin: 0; /* Remove margin 移除外边距 */
+}
+
+#nav-mobile {
+    position: fixed; /* Fixed position 固定定位 */
+    bottom: 0; /* Stick to bottom 紧贴底部 */
+    width: 100vw; /* Full width 全屏宽度 */
+    background-color: #EAFBE6; /* Use your color scheme 使用配色方案中的颜色 */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow 增加阴影 */
+}
+
+/* Add icon styles 添加图标样式 */
+#nav-mobile ul li a {
+    display: block; /* Make each icon a block element 每个图标作为块元素 */
+    padding: 1rem 0; /* Add vertical spacing 添加上下间距 */
+    font-size: 1.5rem; /* Set emoji size 设置 emoji 大小 */
+    text-decoration: none; /* Remove underline 取消下划线 */
+}
+
+#nav-desktop {
+    position: fixed; /* Fixed to top 固定在顶部 */
+    top: 0; /* Stick to top 紧贴顶部 */
+    width: 100vw; /* Full width 全屏宽度 */
+    background-color: #c9b6e4; /* Use your color scheme 使用配色 */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow 增加阴影 */
+    display: none; /* Hide by default 默认隐藏 */
+}
+
+#nav-desktop ul li a {
+    display: block; /* Make each menu item a block element 让每个菜单项成为块元素 */
+    padding: 1rem 0; /* Add vertical spacing 上下内边距为1rem，左右为0 */
+    font-size: 1.25rem; /* Set the font size 设置字体大小为1.25rem */
+    text-decoration: none; /* Remove underline 去掉下划线 */
+    color: var(--text-color); /* Set text color using variable 使用变量设置字体颜色 */
+}
+
+/* Micro-interaction for menu items 菜单项的微交互效果 */
+#nav-desktop ul li a:hover {
+    font-weight: bold; /* Make text bold 文字加粗 */
+    color: var(--primary-color); /* Change text color to primary color 改变文字颜色为主题色 */
+    text-decoration: underline; /* Add underline 添加下划线 */
+    background-color: var(--background-hover-color); /* Optional: change background color 可选：改变背景色 */
+}
+
+/* Responsive Image 图片自适应 */
+.responsive-img {
+    display: block; /* Make the image a block element 使图片成为块级元素 */
+    max-width: 100%; /* Set maximum width to 100% of its container 设置最大宽度为容器的100% */
+    height: auto; /* Automatically adjust height to maintain aspect ratio 高度自动调整以保持宽高比 */
+}
+
+
+
+
+
+
+/* MENUS */
+/* Responsive control */
+@media screen and (min-width: 768px) {
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+}

@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />  
+        <link rel="stylesheet" href="css/page_css/site_map.css" />  
+        
 
         <!-- NEW -->
         <link
@@ -21,14 +24,115 @@
     </head>
     <body>
         <!-- Main Navigation -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html" aria-current="page"
+                        ><span class="icon">🧭</span></a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
 
         <main>
             <div class="container">
-                <h1>WP3 Home Page</h1>
+                <section class="mt-2">
+                    <h1>Our Site Map</h1>
+
+                    <p>
+                        This site map outlines the structure of our mental
+                        health platform, making it easier for users to navigate
+                        and find resources quickly.
+                    </p>
+
+                    <!-- 插入网站地图图片，使用响应式类名，alt文字描述图片内容 -->
+                    <img
+                        src="assets/SiteMap.png"
+                        alt="Site map of the mental health platform"
+                        class="responsive-img"
+                    />
+
+                    <p>
+                        In this exercise, I created a site map based on the card
+                        sort results. The goal is to create a user-friendly
+                        navigation structure.
+                    </p>
+
+                    <p>
+                        This accordion shows the website structure. Expand each
+                        section to view pages and sub-pages, with notes on
+                        user/client needs.
+                    </p>
+                </section>
+
+                <!-- Accordion section 手风琴模块区域 -->
+                <section class="accordion m-y-5">
+                    <!-- 表头 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Inspiration</button>
+
+                        <!-- 内容 -->
+                        <div class="accordion-content">
+                            <p class="m-y-3">
+                                Central hub for users to see and share inspiring
+                                content. Supports the client's goal of
+                                empowering users with knowledge and positivity.
+                            </p>
+
+                            <!-- Nested Accordion for Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion nested">
+                                    <div class="accordion-item">
+                                        <button class="accordion-header">
+                                            ▹▷ Garden Showcase
+                                        </button>
+                                        <div class="accordion-content">
+                                            <p class="m-y-3">
+                                                THIS SHOULD BE YOUR ANNOTATION
+                                                FOR YOUR WEBSITE A showcase of
+                                                inspiring food gardens. Supports
+                                                ...
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
+
+        <!-- JavaScript Linking 脚本链接 -->
+
+        <script type="module" src="js/site_map.js"></script>
     </body>
 </html>
