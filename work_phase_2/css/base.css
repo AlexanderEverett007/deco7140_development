@@ -1,5 +1,15 @@
 /* base.css */
 
+/* Define global color variables */
+:root {
+    --primary-color: #2c3e50; /* Dark Blue - for titles, buttons */
+    --secondary-color: #3498db; /* Bright Blue - for hover, accents */
+    --accent-color: #e74c3c; /* Red - for warnings or highlights */
+    --text-color: #333; /* Dark Gray - for body text */
+    --background-color: #ffccd5; /* Light Green - body background */
+    --container-bg-color: #ffffff; /* White - container background */
+}
+
 /* Apply site-wide font */
 body {
     font-family: "Nunito", sans-serif;
@@ -34,31 +44,4 @@ strong {
     font-weight: 700;
 }
 
-.home-card {
-    max-width: 800px;
-    margin: 60px auto;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.home-card h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5em;
-    color: #333;
-}
-
-.home-card h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1em;
-    color: #444;
-}
-
-.home-card p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-}
 

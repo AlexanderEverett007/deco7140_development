@@ -1,0 +1,79 @@
+/* Section container for emotional design cards */
+/* 情感设计卡片的整体容器样式 */
+.emotion-design-section {
+    text-align: center; /* Center the text 内容居中 */
+    background-color: #eef8f5; /* Soft green background 柔和的绿色背景，营造心理健康氛围 */
+    padding: 2rem; /* Outer padding 外边距 */
+    border-top: 4px solid #98d6c1; /* Top border with accent color 顶部边框突出主题色 */
+    padding-bottom: 4rem; /* Increase bottom spacing 增加底部间距 */
+}
+
+/* Card container holding 3 cards in a row */
+/* 三个卡片的外层容器，横向排列 */
+.emotion-card-container {
+    display: flex; /* Use flex layout 使用弹性盒子布局 */
+    flex-wrap: wrap; /* Wrap on small screens 小屏幕时自动换行 */
+    justify-content: center; /* Center cards 居中排列卡片 */
+    gap: 1.5rem; /* Gap between cards 卡片间距 */
+    margin-top: 1rem; /* Margin above the cards 上边距 */
+}
+
+/* Individual card styling */
+/* 每张卡片的样式 */
+.emotion-card {
+    background-color: #ffffff; /* White card background 白色背景 */
+    border-radius: 16px; /* Rounded corners 圆角边框 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Drop shadow 阴影效果 */
+    width: 280px; /* Fixed width 固定宽度 */
+    padding: 1rem; /* Inner padding 内边距 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation 平滑的动效切换 */
+}
+
+/* Hover effect for cards */
+/* 鼠标悬停时的卡片动画效果 */
+.emotion-card:hover {
+    transform: translateY(-5px); /* Move up slightly 向上浮动 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow 更强的阴影 */
+}
+
+/* Image inside each card */
+/* 卡片内图片样式 */
+.emotion-card img {
+    width: 100%; /* Full width 图片占满卡片宽度 */
+    border-radius: 12px; /* Rounded image corners 图片圆角 */
+    margin-bottom: 0.8rem; /* Space below image 图片与文字的间距 */
+}
+
+/* Card title text */
+/* 卡片标题文本 */
+.emotion-card h3 {
+    color: #3b8270; /* Calming green-blue tone 宁静的绿色调 */
+    margin: 0.5rem 0; /* Vertical spacing 垂直间距 */
+    font-size: 1.2rem; /* Font size 字体大小 */
+}
+
+/* Description text in card */
+/* 卡片中的描述文本 */
+.emotion-card p {
+    font-size: 0.95rem; /* Slightly smaller font 稍小的字体 */
+    color: #444; /* Dark gray 深灰色，易读 */
+}
+
+/* Link button styling */
+/* 链接按钮的样式 */
+.btn-link {
+    display: inline-block; /* Allow padding 设置内边距有效 */
+    margin-top: 1rem; /* Space above button 按钮上边距 */
+    padding: 0.5rem 1rem; /* Button padding 按钮内边距 */
+    background-color: #7dcfa7; /* Soft green background 柔和绿色背景 */
+    color: white; /* White text 白色文字 */
+    text-decoration: none; /* Remove underline 移除下划线 */
+    border-radius: 8px; /* Rounded button 圆角按钮 */
+    font-weight: bold; /* Bold text 加粗字体 */
+}
+
+/* Hover effect for button */
+/* 按钮悬停样式 */
+.btn-link:hover {
+    background-color: #5abf92; /* Darker green on hover 悬停时颜色加深 */
+}

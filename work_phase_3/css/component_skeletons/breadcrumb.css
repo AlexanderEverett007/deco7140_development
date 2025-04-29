@@ -1,0 +1,46 @@
+/* Breadcrumb wrapper 面包屑整体容器 */
+.breadcrumb {
+    text-align: left; /* Align text to the left 左对齐文本 */
+    padding: 1rem 5vw 0 5vw; /* Mobile: top 1rem, left/right 5vw, bottom 0 手机端上1rem、左右5vw、下0 */
+    font-size: 0.9rem; /* Text size 字体大小 */
+    margin-top: 4rem; /* Top margin to separate from nav 上外边距4rem，与导航栏分隔 */
+}
+
+/* Desktop screen adjustment 桌面端调整 */
+@media screen and (min-width: 768px) {
+    .breadcrumb {
+        padding: 1rem 15vw 0 15vw; /* Desktop: top 1rem, left/right 15vw, bottom 0 桌面端上1rem、左右15vw、下0 */
+    }
+}
+
+/* Breadcrumb list 布局列表 */
+.breadcrumb-list {
+    list-style: none; /* Remove default bullets 移除默认圆点 */
+    display: inline-flex; /* Horizontal layout 横向排列 */
+    flex-wrap: wrap; /* Wrap if necessary 自动换行 */
+    align-items: center; /* Center items vertically 垂直居中 */
+    gap: 0.1rem; /* Tiny gap between items 极小组间间距 */
+    margin: 0;
+    padding: 0;
+}
+
+/* Breadcrumb links 链接样式 */
+.breadcrumb-list a {
+    text-decoration: none; /* No underline 去除下划线 */
+    color: #333; /* Default link color 默认链接颜色 */
+}
+
+.breadcrumb-list a:hover {
+    text-decoration: underline; /* Underline on hover 悬停时显示下划线 */
+}
+
+/* Current page 当前页面文字 */
+.breadcrumb-list strong {
+    color: #444; /* Darker text color 深色文字 */
+    font-weight: bold; /* Bold text 加粗文字 */
+}
+
+/* Separator > symbol 分隔符样式 */
+.separator {
+    color: #666; /* Separator color 分隔符颜色 */
+}

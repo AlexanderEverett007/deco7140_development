@@ -4,31 +4,103 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google Fonts: Oswald -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- CSS Linking -->
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
 
-        <!-- NEW -->
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+        <link rel="stylesheet" href="css/component_skeletons/breadcrumb.css" />
+
         <link
             rel="icon"
             type="image/x-icon"
             href="assets/favicon_io/favicon-32x32.png"
         />
 
-        <title>Work Phase 3</title>
+        <title>Visceral Design</title>
     </head>
     <body>
         <!-- Main Navigation -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+
+        <!-- Breadcrumb navigation 面包屑导航 -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li>
+                    <a href="index.html">Home</a>
+                    <span class="separator">></span>
+                </li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                    <span class="separator">></span>
+                </li>
+                <li><strong>Visceral Design</strong></li>
+            </ul>
+        </nav>
 
         <main>
             <div class="container">
-                <h1>WP3 Home Page</h1>
+                <h1>Visceral Design</h1>
+
+                <section class="mt-1">
+                    <h2>About This Site</h2>
+                    <p>
+                        Visceral Design focuses on creating an immediate
+                        emotional impact when users first encounter a website.
+                        Its purpose is to capture attention, evoke positive
+                        feelings, and build a sense of trust through visual
+                        elements like color, typography, layout, and imagery. By
+                        making a strong first impression, visceral design
+                        enhances user engagement and sets the emotional tone for
+                        the overall experience.
+                    </p>
+                </section>
             </div>
         </main>
+
+        <!-- JavaScript Linking 脚本链接 -->
+        <script type="module" src="js/style_guide.js"></script>
     </body>
 </html>
