@@ -17,9 +17,12 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-
         <link rel="stylesheet" href="css/page_css/style_guide.css" />
         <link rel="stylesheet" href="css/component_skeletons/breadcrumb.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+
+
+
 
         <link
             rel="icon"
@@ -97,10 +100,38 @@
                         the overall experience.
                     </p>
                 </section>
+
+                <!-- This is the code for your gallery -->
+                <article>
+                    <h2 class="m-t-3">Page Layouts</h2>
+                    <!-- Gallery and Viewer will go here -->
+                    <section class="gallery m-t-3">
+                        <img
+                            src="assets/Brainstorming - MobileHomePage.jpg"
+                            alt="YOUR ANNOTATION HERE"
+                        />
+                        <img
+                            src="assets/Brainstorming - DesktopHomePage.jpg"
+                            alt="YOUR ANNOTATION HERE"
+                        />
+                    </section>
+
+                    <!-- Large Image Viewer -->
+                    <aside class="viewer" id="viewer" aria-hidden="true">
+                        <button
+                            id="close-viewer"
+                            aria-label="Close image viewer"
+                        >
+                            ✖
+                        </button>
+                        <img id="viewer-img" src="" alt="" />
+                        <p id="viewer-caption"></p>
+                    </aside>
+                </article>
             </div>
         </main>
 
         <!-- JavaScript Linking 脚本链接 -->
-        <script type="module" src="js/style_guide.js"></script>
+        <script type="module" src="js/visceral_design.js"></script>
     </body>
 </html>

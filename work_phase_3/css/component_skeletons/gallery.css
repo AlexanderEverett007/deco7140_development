@@ -1,0 +1,59 @@
+.gallery {
+    display: grid;
+    /* Use CSS Grid to layout child elements 
+       使用 CSS 网格布局子元素 */
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Define flexible columns:
+    - auto-fit: 自动填充尽可能多的列（会压缩空列）
+    - minmax(200px, 1fr): 每列最小宽度为200px，最大宽度为可用空间的等分
+       定义灵活的列布局，每列最小200像素，最大自动分配空间 */
+
+    place-items: center;
+    /* Horizontally and vertically center items 
+       水平和垂直方向都居中子元素 */
+
+    gap: 1rem;
+    /* Add spacing between grid items 
+       网格子项之间的间距为1rem（约16px） */
+
+    margin-bottom: 2rem;
+    /* Add space below the gallery 
+       整个 gallery 区域下方留出2rem 的外边距 */
+}
+
+.gallery img {
+    width: 60%; /* Set image width to 60% of its parent element
+                                 设置图像宽度为父元素的 60%，适配移动端 */
+
+    height: 200px; /* Fix the height of the image to 200px
+                                 将图像高度固定为 200 像素 */
+
+    object-fit: cover; /* Scale image to fill container while preserving aspect ratio;
+                                extra parts are cropped
+                                 按比例缩放图像以填满容器，多余部分会裁剪，保持图像不变形 */
+
+    object-position: top; /* Align the top of the image with the top of the container
+                                 图像顶部对齐容器顶部，避免重要信息被裁剪 */
+
+    position: relative; /* Use relative positioning as a base for absolutely positioned children
+                                 使用相对定位，方便子元素进行绝对定位 */
+
+    cursor: pointer; /* Change mouse cursor to a hand icon on hover
+                                 鼠标悬停时变为手型，表示图像可点击 */
+
+    border-radius: 8px; /* Round the corners with an 8px radius
+                                 设置圆角为 8 像素，使图像更柔和美观 */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .gallery img {
+        width: 100%;
+        height: 300px;
+    }
+}

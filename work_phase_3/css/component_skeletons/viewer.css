@@ -1,0 +1,41 @@
+.viewer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    padding: 1rem;
+    padding-bottom: 50px;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.viewer.open {
+    transform: translateX(
+        0
+    ); /* Move panel into view 从右边滑入屏幕中可见位置 */
+}
+
+/* Close button styling 关闭按钮样式 */
+#close-viewer {
+    background: none; /* No background color 不使用背景色 */
+    border: none; /* No border 不显示边框 */
+    font-size: 1.5rem; /* Slightly larger font size 设置字体大小为1.5倍基础值 */
+    float: right; /* Align to the right 向右浮动对齐 */
+    cursor: pointer; /* Show pointer cursor 鼠标悬停时显示手型 */
+}
+
+/* Image caption styling 图片说明文字样式 */
+#viewer-caption {
+    padding: 5vh 5vw; /* Top/bottom: 5% of viewport height 上下内边距5vh，左右内边距5vw */
+}
+
+@media screen and (min-width: 768px) {
+    .viewer {
+        width: 50%;
+    }
+}
