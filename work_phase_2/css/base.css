@@ -8,11 +8,21 @@
     --container-bg-color: #ffffff; /* White - container background */
 }
 
-/* Apply site-wide font */
 body {
-    font-family: "Nunito", sans-serif;
-    font-size: 1rem; /* base size = 16px */
-    line-height: 1.6;
+    min-height: 100%; /* Ensure body takes up full height of the viewport 确保 body 最小高度占满视口高度 */
+    padding: 2rem; /* Add internal padding around the page 页面整体内边距为 2rem */
+
+    font-family: "Nunito", sans-serif; /* Use Nunito font with fallback 使用 Nunito 字体（无衬线备选） */
+    font-size: 1rem; /* Base font size = 16px 设置基础字体大小为 1rem，即 16 像素 */
+    line-height: 1.6; /* Improve readability 设置合适的行高，提升可读性 */
+    color: var(
+        --text-color
+    ); /* Use global text color variable 使用全局变量定义文本颜色 */
+
+    background-color: var(
+        --background-color
+    ); /* Use global background color variable 使用全局变量定义页面背景色 */
+    background-attachment: scroll; /* Background scrolls with content 背景随内容滚动 */
 }
 
 /* Heading 1 - 4.2rem (≈ 67px) */
@@ -41,5 +51,3 @@ p {
 strong {
     font-weight: 700;
 }
-
-

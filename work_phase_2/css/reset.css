@@ -1,3 +1,12 @@
+/*Purpose: Eliminate default style differences between browsers
+Different browsers handle default styles of HTML elements differently. 
+For example, some browsers apply default margins to <h1>, while others add indentation to <ul>. 
+These inconsistencies can lead to layout issues, especially when building responsive web pages.*/
+/*
+目的：消除不同浏览器之间的默认样式差异
+不同浏览器对 HTML 元素的默认样式处理不一样，比如有的浏览器会给 <h1> 默认加边距，有的 <ul> 会有缩进。这种差异会导致布局混乱，尤其是做响应式页面时。
+*/
+
 /* reset.css — full CSS reset including animation removal */
 *,
 *::before,
