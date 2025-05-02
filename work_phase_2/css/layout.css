@@ -1,7 +1,4 @@
 body {
-    /* display: flex;
-    justify-content: center; */
-    align-items: start;
     min-height: 100%;
     background-color: var(--background-color);
     padding: 2rem;
@@ -27,48 +24,6 @@ body {
     --space-3: 1rem;
     --space-4: 1.5rem;
     --space-5: 2rem;
-}
-
-/*Separate the character introduction from the interview content.*/
-.bio {
-    background-color: #fdf2f2; /* Light pink*/
-    padding: 1.5rem;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-/*Bold the problem text*/
-.question {
-    font-weight: 700;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color); 
-    display: block;
-}
-
-.interview {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 3rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-/*just for the page of accessibility*/
-.accessibility-content section {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-}
-
-/*just for the page of accessibility*/
-.accessibility-box {
-    background-color: #e0f0ff; /* 柔和蓝色背景 */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* === MARGIN CLASSES === */
@@ -119,14 +74,6 @@ body {
 .m-b-1 {
     margin-bottom: var(--space-1);
 }
-/* ... */
-
-.m-s-1 {
-    margin-inline-start: var(--space-1);
-}
-.m-e-1 {
-    margin-inline-end: var(--space-1);
-}
 
 .m-x-1 {
     margin-left: var(--space-1);
@@ -145,20 +92,12 @@ body {
 .p-1 {
     padding: var(--space-1);
 }
-/* ... */
 
 .p-t-1 {
     padding-top: var(--space-1);
 }
 .p-b-1 {
     padding-bottom: var(--space-1);
-}
-
-.p-s-1 {
-    padding-inline-start: var(--space-1);
-}
-.p-e-1 {
-    padding-inline-end: var(--space-1);
 }
 
 .p-x-1 {

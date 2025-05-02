@@ -4,31 +4,255 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google Fonts: Oswald -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- CSS Linking -->
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+        <link rel="stylesheet" href="css/component_skeletons/breadcrumb.css" />
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
 
-        <!-- NEW -->
         <link
             rel="icon"
             type="image/x-icon"
             href="assets/favicon_io/favicon-32x32.png"
         />
 
-        <title>Work Phase 3</title>
+        <title>Behavioural Guide</title>
     </head>
     <body>
         <!-- Main Navigation -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+
+        <!-- Breadcrumb navigation 面包屑导航 -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li>
+                    <a href="index.html">Home</a>
+                    <span class="separator">></span>
+                </li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                    <span class="separator">></span>
+                </li>
+                <li><strong>Behavioural Guide</strong></li>
+            </ul>
+        </nav>
 
         <main>
             <div class="container">
-                <h1>WP3 Home Page</h1>
+                <h1>Behavioural Guide</h1>
+
+                <section class="mt-1">
+                    <h2>About This Site</h2>
+                    <p>
+                        Behavioural design focuses on usability, functionality,
+                        and user interaction. It ensures the product is
+                        efficient, intuitive, and satisfying to use.
+                    </p>
+                </section>
+
+                <!-- Behavioural Design Topic Tags Container 行为设计主题标签容器 -->
+                <section class="behaviour-tags">
+                    <h2>Design Focus Areas</h2>
+                    <div class="tag-container">
+                        <!-- Each tag links to a section below 每个标签链接到下方对应的板块 -->
+                        <a href="#links" class="tag">Links</a>
+                        <a href="#navigation" class="tag">Navigation</a>
+                        <a href="#cards" class="tag">Cards</a>
+                        <a href="#icons" class="tag">Icons</a>
+                        <a href="#buttons" class="tag">Buttons</a>
+                        <a href="#forms" class="tag">Forms</a>
+                    </div>
+                </section>
+
+                <!-- Behavioural Design Sections 行为设计六大部分 -->
+                <section id="links">
+                    <h2>Links</h2>
+                    <p>
+                        We designed links with consistent styling and clear
+                        hover states to help users recognize clickable elements.
+                    </p>
+                    <!-- Example: Visual Demo of Link Styling 链接样式示意图 -->
+                    <div class="link-demo">
+                        <a href="#" class="custom-link"
+                            >This is a standard link</a
+                        >
+                        <a href="#" class="custom-link visited"
+                            >This is a visited link</a
+                        >
+                        <a href="#" class="custom-link hover-simulated"
+                            >This is a hover link</a
+                        >
+                    </div>
+
+                    <!-- Optional: Static image if needed (real screenshot) -->
+                    <!-- <img src="assets/images/behaviour/links.png" alt="Example of link design"> -->
+                </section>
+
+                <section id="navigation">
+                    <h2>Navigation</h2>
+                    <p>
+                        The sticky navigation bar remains visible as users
+                        scroll, supporting better orientation and quick access.
+                    </p>
+                    <!-- Orange Navigation Example 橙色导航栏样式展示 -->
+                    <div class="orange-nav-demo">
+                        <ul class="orange-nav-list">
+                            <li>
+                                <a href="#" class="orange-nav-link active"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="orange-nav-link"
+                                    >Resources</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="orange-nav-link">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" class="orange-nav-link"
+                                    >Community</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="orange-nav-link"
+                                    >Daily Wellness</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" class="orange-nav-link">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="cards">
+                    <h2>Cards</h2>
+                    <p>
+                        Cards group related information into visual blocks,
+                        making content easier to scan and interact with. In
+                        addition, their visual separation, interactive hover
+                        effect, and action buttons make them intuitive and
+                        engaging for users.
+                    </p>
+                    <!-- Card Design Demo 卡片示意展示 -->
+                    <div class="card-demo-container">
+                        <div class="card">
+                            <h3>Guided Meditation</h3>
+                            <p>
+                                Listen to calming audio to reduce stress and
+                                refocus your mind.
+                            </p>
+                            <a href="#" class="card-btn">Try Now</a>
+                        </div>
+
+                        <div class="card">
+                            <h3>Mood Tracker</h3>
+                            <p>
+                                Log your feelings daily and visualize your
+                                emotional journey.
+                            </p>
+                            <a href="#" class="card-btn">Start Tracking</a>
+                        </div>
+
+                        <div class="card">
+                            <h3>Support Forums</h3>
+                            <p>
+                                Join discussions and find community support for
+                                your well-being.
+                            </p>
+                            <a href="#" class="card-btn">Explore</a>
+                        </div>
+                    </div>
+                    <img
+                        src="assets/image/behaviour/CARD.png"
+                        alt="Example of link design"
+                    />
+                </section>
+
+                <section id="icons">
+                    <h2>Icons</h2>
+                    <p>
+                        We use intuitive icons to support recognition and reduce
+                        cognitive load, accompanied by accessible labels.
+                    </p>
+                    <img
+                        src="assets/images/behaviour/icons.png"
+                        alt="Example of icon usage"
+                    />
+                </section>
+
+                <section id="buttons">
+                    <h2>Buttons</h2>
+                    <p>
+                        Buttons feature clear labels, contrast for visibility,
+                        and hover/click feedback to reinforce interactions.
+                    </p>
+                    <img
+                        src="assets/images/behaviour/buttons.png"
+                        alt="Example of button design"
+                    />
+                </section>
+
+                <section id="forms">
+                    <h2>Forms</h2>
+                    <p>
+                        Forms are designed for clarity, with aligned labels,
+                        inline guidance, and validation feedback.
+                    </p>
+                    <img
+                        src="assets/images/behaviour/forms.png"
+                        alt="Example of form design"
+                    />
+                </section>
             </div>
         </main>
+
+        <!-- JavaScript Linking 脚本链接 -->
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>
