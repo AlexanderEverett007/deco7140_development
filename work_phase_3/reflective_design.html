@@ -4,31 +4,360 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google Fonts: Oswald -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- CSS Linking -->
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
+        <link rel="stylesheet" href="css/component_skeletons/breadcrumb.css" />
+        <link rel="stylesheet" href="css/page_css/reflective_design.css" />
 
-        <!-- NEW -->
         <link
             rel="icon"
             type="image/x-icon"
             href="assets/favicon_io/favicon-32x32.png"
         />
 
-        <title>Work Phase 3</title>
+        <title>Reflective Design</title>
     </head>
     <body>
         <!-- Main Navigation -->
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+
+        <!-- Breadcrumb navigation 面包屑导航 -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li>
+                    <a href="index.html">Home</a>
+                    <span class="separator">></span>
+                </li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                    <span class="separator">></span>
+                </li>
+                <li><strong>Reflective Design</strong></li>
+            </ul>
+        </nav>
 
         <main>
             <div class="container">
-                <h1>WP3 Home Page</h1>
+                <h1>Reflective Design</h1>
+
+                <section class="mt-1">
+                    <h2>About This Site</h2>
+                    <p>
+                        At Reflective Design, we believe that great design goes
+                        beyond aesthetics — it invites critical thinking,
+                        personal interpretation, and meaningful engagement. Our
+                        platform is dedicated to exploring how interactive
+                        systems can provoke users to reflect on their values,
+                        behaviors, and assumptions. By showcasing
+                        thought-provoking projects and offering resources for
+                        designers, students, and researchers, we aim to inspire
+                        a deeper dialogue between technology and humanity.
+                        Whether you're curious about design ethics, user
+                        experience, or speculative futures, Reflective Design is
+                        your space to question, explore, and reimagine.
+                    </p>
+                </section>
+
+                <!-- Accordion Section 手风琴区域 -->
+                <div class="accordion">
+                    <!-- Accordion 1: Values Mapping -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">Values Mapping</button>
+                        <div class="accordion-content">
+                            <div class="values-table-container">
+                                <table class="values-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Reflective Value</th>
+                                            <th>Design Element</th>
+                                            <th>WCAG Mapping</th>
+                                            <th>Annotation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Empathy</td>
+                                            <td>Calming Color Palette</td>
+                                            <td>1.4.3 Contrast (Minimum)</td>
+                                            <td>
+                                                Soft tones promote emotional
+                                                comfort.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Accessibility</td>
+                                            <td>Keyboard Navigation</td>
+                                            <td>2.1.1 Keyboard</td>
+                                            <td>
+                                                All interactive elements are
+                                                tab-accessible.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transparency</td>
+                                            <td>Clear Labels</td>
+                                            <td>
+                                                3.3.2 Labels or Instructions
+                                            </td>
+                                            <td>
+                                                Each input field includes
+                                                contextual guidance.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inclusivity</td>
+                                            <td>Alt Text for Images</td>
+                                            <td>1.1.1 Non-text Content</td>
+                                            <td>
+                                                Visually descriptive alt text
+                                                provided for all media.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 2: Imagery and Tone -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Imagery and Tone
+                        </button>
+                        <div class="accordion-content">
+                            <!-- 插入图片并添加说明 -->
+                            <figure class="accordion-figure">
+                                <img
+                                    src="assets/image/reflective/tone.png"
+                                    alt="Imagery and Tone Infographic"
+                                />
+                                <figcaption>
+                                    A breakdown of how imagery and tone support
+                                    the emotional goals of the website.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 3: Language and Expression -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Language and Expression
+                        </button>
+                        <div class="accordion-content">
+                            <div class="language-expression-content">
+                                <h3>Language and Expression</h3>
+
+                                <div class="lang-section">
+                                    <h4>Original Text</h4>
+                                    <p class="highlight-box">
+                                        We provide design tools and resources
+                                        for students to understand ethical
+                                        design.
+                                    </p>
+                                </div>
+
+                                <div class="lang-section">
+                                    <h4>Revised Text</h4>
+                                    <p class="highlight-box">
+                                        Let’s explore how thoughtful design can
+                                        shape a more caring digital world –
+                                        starting with your own choices.
+                                    </p>
+                                </div>
+
+                                <div class="lang-section">
+                                    <h4>Style & Expression</h4>
+                                    <ul>
+                                        <li>Use friendly, approachable tone</li>
+                                        <li>Encourage reflection</li>
+                                        <li>
+                                            Avoid neutral or technical language
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 新增 Flex 容器 -->
+                                <div class="lang-flex">
+                                    <div class="lang-image">
+                                        <img
+                                            src="assets/image/reflective/language and expression.png"
+                                            alt="Illustration: Your choices matter"
+                                        />
+                                    </div>
+                                    <div class="lang-annotation">
+                                        <h4>Annotation</h4>
+                                        <p>
+                                            This revision uses reflective and
+                                            emotionally inclusive language to
+                                            promote user agency, respect
+                                            individual perspectives, and invite
+                                            deeper consideration in the
+                                            interaction.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 4: Seeing Ourselves -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Seeing Ourselves
+                        </button>
+                        <div class="accordion-content">
+                            <div id="community-list">
+                                <!-- API response content will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accessibility Audit Section -->
+                    <section class="accessibility-audit-section">
+                        <h2>Accessibility Audit</h2>
+
+                        <div class="flip-card-container">
+                            <!-- Card 1 -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <h3>Issue 1</h3>
+                                        <p>
+                                            &lt;figure&gt; element lacks a label
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>WCAG: 1.1.1 Non-text Content</h4>
+                                        <p>
+                                            <strong>Affected:</strong>
+                                            &lt;figure
+                                            class="accordion-figure"&gt;
+                                        </p>
+                                        <p>
+                                            <strong>Why it matters:</strong>
+                                            Screen reader users can't interpret
+                                            the figure without a label.
+                                        </p>
+                                        <p>
+                                            <strong>Fix:</strong> Add a
+                                            &lt;figcaption&gt;, e.g.:<br />
+                                            <code
+                                                >&lt;figcaption&gt;Describes the
+                                                image&lt;/figcaption&gt;</code
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <h3>Issue 2</h3>
+                                        <p>Low colour contrast (4.35:1)</p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>WCAG: 1.4.3 Contrast (Minimum)</h4>
+                                        <p>
+                                            <strong>Affected:</strong> Text
+                                            elements with light backgrounds
+                                        </p>
+                                        <p>
+                                            <strong>Why it matters:</strong> Low
+                                            vision users may not be able to read
+                                            the text.
+                                        </p>
+                                        <p>
+                                            <strong>Fix:</strong> Adjust text
+                                            colour or background for better
+                                            contrast.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <h3>Issue 3</h3>
+                                        <p>
+                                            Scrollable &lt;div&gt; not tabbable
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h4>WCAG: 2.1.1 Keyboard</h4>
+                                        <p>
+                                            <strong>Affected:</strong>
+                                            Scrollable containers with no
+                                            focusable items
+                                        </p>
+                                        <p>
+                                            <strong>Why it matters:</strong>
+                                            Keyboard users can’t access the
+                                            content.
+                                        </p>
+                                        <p>
+                                            <strong>Fix:</strong> Add
+                                            <code>tabindex="0"</code> to
+                                            scrollable divs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
+
+        <!-- JavaScript Linking 脚本链接 -->
+        <script type="module" src="js/reflective_design.js"></script>
     </body>
 </html>

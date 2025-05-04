@@ -27,7 +27,7 @@
     max-height: 0; /* Hide content initially / 初始内容高度为0，隐藏 */
     overflow: auto; /* Enable scroll when content overflows / 内容超出时出现滚动条 */
     padding: 0 1rem; /* Add horizontal padding / 左右添加内边距 */
-    background: whitesmoke; /* Set background color / 设置背景颜色为浅灰色 */
+    background:var(background-color); /* Set background color / 设置背景颜色为浅灰色 */
     font-size: 0.9rem; /* Set font size for readability / 设置较小的字体大小，提升可读性 */
 }
 

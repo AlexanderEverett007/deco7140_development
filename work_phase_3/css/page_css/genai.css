@@ -1,0 +1,66 @@
+/* ===== 页面整体布局 ===== */
+body {
+    background-color: #eafce7; /* 清新绿色背景 */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===== 主标题样式 ===== */
+.genai-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 4rem; /* 上边距，避免被菜单栏遮住 */
+    margin-bottom: 2rem;
+    color: #2f4f4f;
+}
+
+/* ===== 每个模块的容器样式 ===== */
+.genai-section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    transition: transform 0.3s ease;
+}
+
+/* ===== 鼠标悬停放大效果 ===== */
+.genai-section:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== 每个模块的标题样式 ===== */
+.genai-section h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+/* ===== 列表项样式 ===== */
+.genai-section ul {
+    padding-left: 1.2rem;
+}
+
+.genai-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== 响应式设计（适配小屏幕）===== */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .genai-section {
+        padding: 1rem;
+    }
+
+    .genai-title {
+        font-size: 1.8rem;
+    }
+}

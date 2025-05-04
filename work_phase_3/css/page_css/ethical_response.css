@@ -1,0 +1,109 @@
+/* === 页面背景整体色调 === */
+.ethical-response {
+    background-color: #e9fbe5;
+    padding: 0;
+    margin-top: 80px; /* 给标题腾出位置，避免被菜单挡住 */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-bottom: 80px;
+    }
+}
+
+/* === 主标题样式 === */
+.ethical-response h1 {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 40px 0 10px;
+    background: linear-gradient(
+        90deg,
+        #d91e36,
+        #f39c12,
+        #2980b9
+    ); /* 动态渐变 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* === 副标题（第二行） === */
+.ethical-response h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #4e4e4e;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* === 每张卡片容器 === */
+.ethical-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 30px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    max-width: 880px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === 卡片左侧彩色边条 === */
+.ethical-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff9a00, #ff5f6d); /* 彩条渐变 */
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* === 悬停动效 === */
+.ethical-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* === 小节标题（h3） === */
+.ethical-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #3b3b8f;
+}
+
+/* === 正文文本段落 === */
+.ethical-card p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* === 强调文字（如Privacy等） === */
+.ethical-card strong {
+    color: #d35400;
+    font-weight: 600;
+}
+
+/* === 响应式：移动设备调整间距 === */
+@media screen and (max-width: 600px) {
+    .ethical-card {
+        margin: 20px 16px;
+        padding: 20px;
+    }
+
+    .ethical-response h1 {
+        font-size: 28px;
+    }
+
+    .ethical-response h2 {
+        font-size: 16px;
+    }
+}

@@ -19,6 +19,7 @@ nav ul {
     width: 100vw; /* Full width 全屏宽度 */
     background-color: #EAFBE6; /* Use your color scheme 使用配色方案中的颜色 */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow 增加阴影 */
+    z-index: 1000;  /* 重点：提高层级，确保菜单在最上层 */
 }
 
 /* Add icon styles 添加图标样式 */
@@ -36,6 +37,7 @@ nav ul {
     background-color: #c9b6e4; /* Use your color scheme 使用配色 */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow 增加阴影 */
     display: none; /* Hide by default 默认隐藏 */
+    z-index: 1000;  /* 重点：提高层级，确保菜单在最上层 */
 }
 
 #nav-desktop ul li a {

@@ -1,28 +1,27 @@
-/**
- * IMPORTS
- * Keep track of external modules being used
- * */
+import { postFormData } from "./modules/postFormData.js";
 
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("community-form");
+    const feedback = document.getElementById("form-feedback");
 
-/**
- * CONSTANTS
- * Define values that don't change e.g. page titles, URLs, etc.
- * */
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-/**
- * VARIABLES
- * Define values that will change e.g. user inputs, counters, etc.
- * */
+        feedback.textContent = "Submitting...";
+        const { success, data } = await postFormData(
+            form,
+            "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
+            {
+                student_number: "s4906205",
+                uqcloud_zone_id: "fd22064f",
+            }
+        );
 
-/**
- * FUNCTIONS
- * Group code into functions to make it reusable
- * */
-
-/**
- * EVENT LISTENERS
- * The code that runs when a user interacts with the page
- * */
-
-// when the page fully loads
-// 页面完全加载后
+        if (success) {
+            feedback.textContent = data.message;
+            form.reset();
+        } else {
+            feedback.textContent = data.message || "Something went wrong.";
+        }
+    });
+});

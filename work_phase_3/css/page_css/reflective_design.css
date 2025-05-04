@@ -1,0 +1,302 @@
+/* 共通样式（所有手风琴） */
+.accordion-header {
+    display: block; /* 让按钮填满容器 */
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    border-radius: 12px; /* 圆角设计 */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 轻微阴影营造空间感 */
+}
+
+/* 各个心理色彩主题 */
+.accordion-item:nth-child(1) .accordion-header {
+    background-color: #fde2e2; /* 浅红 - 温暖、安全 */
+    color: #b0413e;
+}
+
+.accordion-item:nth-child(2) .accordion-header {
+    background-color: #e0f4ff; /* 浅蓝 - 放松、冷静 */
+    color: #2a6f97;
+}
+
+.accordion-item:nth-child(3) .accordion-header {
+    background-color: #e0f9e0; /* 浅绿 - 治愈、自然 */
+    color: #3c8031;
+}
+
+.accordion-item:nth-child(4) .accordion-header {
+    background-color: #f0e7ff; /* 薰衣草紫 - 冥想、安抚 */
+    color: #6c5b7b;
+}
+
+.accordion-item:nth-child(5) .accordion-header {
+    background-color: #fde2e2; /* 浅蓝 - 放松、冷静 */
+    color: #b0413e;
+}
+
+/* 鼠标悬停时的变化 */
+.accordion-header:hover {
+    opacity: 0.9;
+}
+
+/* Values Mapping Table 样式表 */
+.values-table-container {
+    overflow-x: auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #fdf8f4; /* 柔粉背景卡片 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* 柔和阴影 */
+}
+
+.values-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.values-table th {
+    background-color: #e9f5e9; /* 柔和薄荷绿色 */
+    color: #333333;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #d0e5d0;
+}
+
+.values-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.values-table td:first-child {
+    font-weight: 500;
+    color: #2e7d5a; /* 加一点绿色提示 reflectiveness */
+}
+/*      */
+.accordion-figure {
+    margin: 1rem auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.accordion-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* 轻微圆角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 柔和阴影 */
+}
+
+.accordion-figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
+/* Language and Expression  */
+.language-expression-content {
+    padding: 1rem;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    background-color: #f9fff8;
+}
+
+.lang-section {
+    margin-bottom: 1.2rem;
+}
+
+.lang-section h4 {
+    color: #004d66;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-box {
+    background-color: #e6f7f1;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border-left: 5px solid #4da6a6;
+}
+
+.lang-image {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.lang-image img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 横向排列图片 + 注释段落 */
+.lang-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* 在窄屏幕上换行 */
+}
+
+/* 图片部分样式保留，不改 */
+
+.lang-annotation {
+    flex: 1;
+    min-width: 250px;
+}
+
+.lang-annotation h4 {
+    color: #004466;
+    margin-bottom: 0.5rem;
+}
+
+.lang-annotation p {
+    line-height: 1.6;
+}
+
+/*Data from API*/
+.card {
+    background-color: #ffffff; /* White background 白色背景 */
+    border: 1px solid #e0e0e0; /* Light grey border 浅灰边框 */
+    border-radius: 10px; /* Rounded corners 圆角边框 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow 柔和阴影 */
+    padding: 1rem; /* Inner spacing 内边距 */
+    margin-bottom: 1.2rem; /* Bottom spacing 下边距 */
+    transition: transform 0.2s ease; /* Hover animation 悬停动画 */
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Slight lift on hover 悬停时微抬 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Stronger shadow 强阴影 */
+}
+
+.card-title {
+    font-weight: 600; /* Bold title 字体加粗 */
+    font-size: 1.1rem; /* Slightly larger title 字体稍大 */
+    margin-bottom: 0.5rem; /* Title and text spacing 标题与文字间距 */
+}
+
+.card-text {
+    font-size: 1rem; /* Normal text size 正常文字大小 */
+    color: #333333; /* Dark grey text 深灰文字 */
+    line-height: 1.5; /* Line spacing 行距 */
+}
+
+/* === Accessibility Audit 容器样式 === */
+.accessibility-audit-section {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+    background-color: #f0fff4; /* 清新绿色背景 */
+    border: 2px solid #4caf50; /* 边框绿色 */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+}
+
+.accessibility-audit-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* === 卡片容器布局 === */
+.flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* === 单张卡片结构与动画 === */
+.flip-card {
+    background-color: transparent;
+    width: 260px;
+    height: 300px;
+    perspective: 1000px; /* 开启 3D 透视效果 */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 正面与背面 */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 正面卡片样式 */
+.flip-card-front {
+    background-color: #ffffff;
+    border: 2px solid #c8e6c9;
+    color: #2e7d32;
+    text-align: center;
+}
+
+.flip-card-front h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.flip-card-front p {
+    font-size: 1rem;
+    color: #4e944f;
+}
+
+/* 背面卡片样式 */
+.flip-card-back {
+    background-color: #e8f5e9;
+    transform: rotateY(180deg);
+    color: #2e7d32;
+}
+
+.flip-card-back h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1b5e20;
+}
+
+.flip-card-back p {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+}
+
+.flip-card-back code {
+    background-color: #d0f0d0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+
