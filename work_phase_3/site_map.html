@@ -64,64 +64,247 @@
         <main>
             <div class="container">
                 <section class="mt-2">
-                    <h1>Our Site Map</h1>
+                    <h1>🗺️ Our Site Map</h1>
+                    <div class="description-box">
+                        <p class="description-title">🧭 Purpose</p>
+                        <p>
+                            This site map outlines the structure of our mental
+                            health platform, making it easier for users to
+                            navigate and find resources quickly.
+                        </p>
+                    </div>
 
-                    <p>
-                        This site map outlines the structure of our mental
-                        health platform, making it easier for users to navigate
-                        and find resources quickly.
-                    </p>
-
-                    <!-- 插入网站地图图片，使用响应式类名，alt文字描述图片内容 -->
                     <img
                         src="assets/Brainstorming - Brainwriting Template (1).jpg"
                         alt="Site map of the mental health platform"
                         class="responsive-img"
                     />
 
-                    <p>
-                        In this exercise, I created a site map based on the card
-                        sort results. The goal is to create a user-friendly
-                        navigation structure.
-                    </p>
+                    <div class="description-box">
+                        <p class="description-title">📌 Design Approach</p>
+                        <p>
+                            In this exercise, I created a site map based on the
+                            card sort results. The goal is to create a
+                            user-friendly navigation structure.
+                        </p>
+                    </div>
 
-                    <p>
-                        This accordion shows the website structure. Expand each
-                        section to view pages and sub-pages, with notes on
-                        user/client needs.
-                    </p>
+                    <div class="description-box">
+                        <p class="description-title">📂 Accordion Use</p>
+                        <p>
+                            This accordion shows the website structure. Expand
+                            each section to view pages and sub-pages, with notes
+                            on user/client needs.
+                        </p>
+                    </div>
                 </section>
 
-                <!-- Accordion section 手风琴模块区域 -->
+                <!-- Nested Accordions Based on Site Map -->
                 <section class="accordion m-y-5">
-                    <!-- 表头 -->
+                    <!-- Home Page -->
                     <div class="accordion-item">
-                        <button class="accordion-header">Inspiration</button>
-
-                        <!-- 内容 -->
+                        <button class="accordion-header">🏠 Home Page</button>
                         <div class="accordion-content">
-                            <p class="m-y-3">
-                                Central hub for users to see and share inspiring
-                                content. Supports the client's goal of
-                                empowering users with knowledge and positivity.
-                            </p>
-
-                            <!-- Nested Accordion for Sub-pages -->
                             <div class="accordion nested">
-                                <div class="accordion nested">
-                                    <div class="accordion-item">
-                                        <button class="accordion-header">
-                                            ▹▷ Garden Showcase
-                                        </button>
-                                        <div class="accordion-content">
-                                            <p class="m-y-3">
-                                                THIS SHOULD BE YOUR ANNOTATION
-                                                FOR YOUR WEBSITE A showcase of
-                                                inspiring food gardens. Supports
-                                                ...
-                                            </p>
-                                        </div>
-                                    </div>
+                                <button class="accordion-header nested">
+                                    Welcome Message
+                                </button>
+                                <div class="accordion-content">
+                                    Short greeting to introduce the site and
+                                    purpose.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Quick Access to Key Sections
+                                </button>
+                                <div class="accordion-content">
+                                    Direct links to major sections for faster
+                                    navigation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resources -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">📚 Resources</button>
+                        <div class="accordion-content">
+                            <div class="accordion nested">
+                                <button class="accordion-header nested">
+                                    Mental Health Articles
+                                </button>
+                                <div class="accordion-content">
+                                    Curated articles offering knowledge and tips
+                                    on mental well-being.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Coping Strategies
+                                </button>
+                                <div class="accordion-content">
+                                    Evidence-based techniques for managing
+                                    stress and emotions.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Guided Meditation Audios
+                                </button>
+                                <div class="accordion-content">
+                                    Audio resources for relaxation and
+                                    mindfulness practice.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Self-help Workbooks
+                                </button>
+                                <div class="accordion-content">
+                                    Printable tools to guide self-reflection and
+                                    growth.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">🛟 Support</button>
+                        <div class="accordion-content">
+                            <div class="accordion nested">
+                                <button class="accordion-header nested">
+                                    Book Appointment
+                                </button>
+                                <div class="accordion-content">
+                                    Schedule a session with mental health
+                                    professionals.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    AI Chatbot for Immediate Help
+                                </button>
+                                <div class="accordion-content">
+                                    24/7 chatbot support for quick emotional
+                                    assistance.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Emergency Contacts
+                                </button>
+                                <div class="accordion-content">
+                                    Phone numbers and links for immediate crisis
+                                    help.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    FAQs
+                                </button>
+                                <div class="accordion-content">
+                                    Answers to common user questions about the
+                                    platform.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">🌐 Community</button>
+                        <div class="accordion-content">
+                            <div class="accordion nested">
+                                <button class="accordion-header nested">
+                                    Discussion Forums
+                                </button>
+                                <div class="accordion-content">
+                                    Safe space for peer conversations and shared
+                                    experiences.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Share Your Story
+                                </button>
+                                <div class="accordion-content">
+                                    Platform for users to express personal
+                                    journeys and inspiration.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Peer Support Groups
+                                </button>
+                                <div class="accordion-content">
+                                    Join groups led by peers with lived mental
+                                    health experience.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Mental Health Events Calendar
+                                </button>
+                                <div class="accordion-content">
+                                    Stay updated with upcoming mental health
+                                    workshops and talks.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Daily Wellness -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            🧘 Daily Wellness
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion nested">
+                                <button class="accordion-header nested">
+                                    Inspirational Quotes
+                                </button>
+                                <div class="accordion-content">
+                                    Daily quotes to uplift and motivate.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Mood Tracker
+                                </button>
+                                <div class="accordion-content">
+                                    Track emotional patterns to improve
+                                    self-awareness.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Gratitude Journal
+                                </button>
+                                <div class="accordion-content">
+                                    Write what you’re thankful for and foster
+                                    positivity.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Us -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">👥 About Us</button>
+                        <div class="accordion-content">
+                            <div class="accordion nested">
+                                <button class="accordion-header nested">
+                                    Mission & Vision
+                                </button>
+                                <div class="accordion-content">
+                                    Understand our goals and commitment to
+                                    mental wellness.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Our Team
+                                </button>
+                                <div class="accordion-content">
+                                    Meet the professionals and volunteers behind
+                                    this platform.
+                                </div>
+
+                                <button class="accordion-header nested">
+                                    Privacy Policy
+                                </button>
+                                <div class="accordion-content">
+                                    Learn how your data is protected and
+                                    handled.
                                 </div>
                             </div>
                         </div>
@@ -132,7 +315,5 @@
 
         <!-- JavaScript Linking 脚本链接 -->
         <script type="module" src="js/site_map.js"></script>
-        
-
     </body>
 </html>

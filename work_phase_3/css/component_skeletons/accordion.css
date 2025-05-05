@@ -27,21 +27,17 @@
     max-height: 0; /* Hide content initially / 初始内容高度为0，隐藏 */
     overflow: auto; /* Enable scroll when content overflows / 内容超出时出现滚动条 */
     padding: 0 1rem; /* Add horizontal padding / 左右添加内边距 */
-    background:var(background-color); /* Set background color / 设置背景颜色为浅灰色 */
+    background: var(
+        background-color
+    ); /* Set background color / 设置背景颜色为浅灰色 */
     font-size: 0.9rem; /* Set font size for readability / 设置较小的字体大小，提升可读性 */
 }
 
-
 /* When an accordion item is open, show the content 当手风琴项被打开时，显示内容 */
 .accordion-item.open .accordion-content {
-    padding: 1rem;        /* Add spacing around the content 给内容加1rem内边距 */
-    max-height: 500px;    /* Set maximum height to 500px 设置最大高度为500px */
+    padding: 1rem; /* Add spacing around the content 给内容加1rem内边距 */
+    max-height: 500px; /* Set maximum height to 500px 设置最大高度为500px */
 }
-
-
-
-
-
 
 /* Style for nested accordion / 嵌套手风琴区域的样式 */
 .accordion.nested {
@@ -52,16 +48,15 @@
 
 /* Styling for nested accordion header 嵌套手风琴的标题样式 */
 .accordion.nested .accordion-header {
-    background-color:#EAB464; /* Set background color using #EAB464 color 使用黄色设置背景 */
+    background-color: #eab464; /* Set background color using #EAB464 color 使用黄色设置背景 */
     color: white; /* Set text color to white 设置文字为白色 */
-    border: 1px solid #EAB464; /* Add border with #EAB464 color 添加黄色边框 */
+    border: 1px solid #eab464; /* Add border with #EAB464 color 添加黄色边框 */
     border-radius: 10px 10px 0 0; /* Round top corners only 只圆角顶部两个角 */
 }
 
 /* Styling for nested accordion content 嵌套手风琴的内容样式 */
 .accordion.nested .accordion-content {
-    color: #EAB464; /* Set text color using #EAB464 使用黄色设置文字 */
-    border: 1px solid #EAB464; /* Add border with #EAB464 color 添加黄色边框 */
+    color: #eab464; /* Set text color using #EAB464 使用黄色设置文字 */
+    border: 1px solid #eab464; /* Add border with #EAB464 color 添加黄色边框 */
     border-radius: 0 0 10px 10px; /* Round bottom corners only 只圆角底部两个角 */
 }
-

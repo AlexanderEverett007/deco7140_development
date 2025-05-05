@@ -11,7 +11,15 @@
     transform: translateX(100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
-    z-index: 10;
+    z-index: 1000;
+}
+
+#viewer-img {
+    max-width: 90%; /* 最大宽度不超过容器宽度的90% */
+    max-height: 80vh; /* 最大高度为视口高度的80% */
+    object-fit: contain; /* 保持图片比例，完整显示图片 */
+    display: block; /* 居中 */
+    margin: 0 auto; /* 居中 */
 }
 
 .viewer.open {
