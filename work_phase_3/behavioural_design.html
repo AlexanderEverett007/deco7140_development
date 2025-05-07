@@ -78,7 +78,7 @@
                 <li><strong>Behavioural Guide</strong></li>
             </ul>
         </nav>
-
+        <!-- Main content starts here 正文内容这里开始 -->
         <main>
             <div class="container">
                 <h1>Behavioural Guide</h1>
@@ -294,93 +294,47 @@
                 </div>
 
                 <!-- Forms -->
-                <!-- 表单总容器 Form Outer Wrapper -->
-                <div class="design-section">
-                    <section id="cards">
-                        <h2>Forms</h2>
-                        <p>
-                            This form collects essential user information with
-                            clear labels and real-time feedback, ensuring
-                            accessibility and ease of use.
-                        </p>
-                        <div class="form-wrapper">
-                            <form
-                                id="community-form"
-                                enctype="multipart/form-data"
-                            >
-                                <!-- 字段分组 Field Group -->
-                                <fieldset>
-                                    <legend>
-                                        Personal Information
-                                    </legend>
+                <!-- 必须放在 behavioural_design.html 文件中 -->
+                <section>
+                    <h2>Community Form</h2>
 
-                                    <!-- Full Name 姓名 -->
-                                    <label for="fullName"
-                                        >Full Name</label
-                                    >
-                                    <input
-                                        type="text"
-                                        id="fullName"
-                                        name="fullName"
-                                        required
-                                    />
+                    <!-- 提交结果反馈信息 -->
+                    <div id="form-feedback"></div>
 
-                                    <!-- Email 电子邮件 -->
-                                    <label for="email">Email</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        required
-                                    />
+                    <!-- 表单本体 -->
+                    <form id="community-form" enctype="multipart/form-data">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" required />
 
-                                    <!-- Mobile 手机号 -->
-                                    <label for="mobile">Mobile</label>
-                                    <input
-                                        type="tel"
-                                        id="mobile"
-                                        name="mobile"
-                                        required
-                                    />
-                                </fieldset>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required />
 
-                                <!-- 留言信息 Message -->
-                                <fieldset>
-                                    <legend>Message</legend>
-                                    <label for="message"
-                                        >Message</label
-                                    >
-                                    <input
-                                        type="text"
-                                        id="message"
-                                        name="message"
-                                    />
-                                </fieldset>
+                        <!-- 移动电话 Mobile -->
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" name="mobile" id="mobile" required />
 
-                                <!-- 上传照片 Upload Photo -->
-                                <fieldset>
-                                    <legend>Photo Upload</legend>
-                                    <label for="photo"
-                                        >Upload Photo</label
-                                    >
-                                    <input
-                                        type="file"
-                                        id="photo"
-                                        name="photo"
-                                    />
-                                </fieldset>
+                        <!-- 留言 Message -->
+                        <label for="message">Message:</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="4"
+                            required
+                        ></textarea>
 
-                                <!-- 提交按钮 Submit Button -->
-                                <button class="btn" type="submit">
-                                    Join the Community
-                                </button>
+                        <!-- 上传照片 Upload -->
+                        <label for="photo">Upload Photo:</label>
+                        <input
+                            type="file"
+                            name="photo"
+                            id="photo"
+                            accept="image/png, image/*"
+                            required
+                        />
 
-                                <!-- 提交反馈 Feedback Message -->
-                                <p id="form-feedback"></p>
-                            </form>
-                        </div>
-                    </section>
-                </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
             </div>
         </main>
 

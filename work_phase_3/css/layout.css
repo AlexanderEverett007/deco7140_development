@@ -4,7 +4,7 @@
     min-height: 100vh;
     width: 90vw;
     margin: 0 auto;
-    padding-top: 60px; /* 👈 Add this line 增加上内边距，即向下移动内容，避免导航遮挡 */
+    padding-top: 60px; /* Increase the top margin to move the content down to avoid navigation blocking 增加上内边距，即向下移动内容，避免导航遮挡 */
     background-color: var(--background-color);
 }
 

@@ -11,10 +11,13 @@ import { fetchGetData } from "./modules/getData.js";
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("community-list");
 
-    fetchGetData("https://yourdomain/api/community/", {
-        student_number: "s4906205",
-        uqcloud_zone_id: "fd22064f",
-    }).then((data) => {
+    fetchGetData(
+        "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
+        {
+            student_number: "s4906205",
+            uqcloud_zone_id: "fd22064f",
+        }
+    ).then((data) => {
         if (!data) {
             container.innerHTML =
                 '<p class="text-danger">Unable to load community members.</p>';
@@ -24,12 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach((member) => {
             const card = document.createElement("div");
             card.className = "card mb-3";
+            // 构造HTML内容
             card.innerHTML = `
             <div class="card-body">
             <h5 class="card-title">${member.name}</h5>
             <p class="card-text">${member.message || "No message provided."}</p>
+
+    ${
+        member.photo
+            ? `<img src="${member.photo}" alt="Uploaded photo" style="max-width: 100%; margin-top: 10px;" />`
+            : ""
+    }
             </div>
-        `;
+`;
+
             container.appendChild(card);
         });
     });
