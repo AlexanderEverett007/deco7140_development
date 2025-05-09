@@ -122,9 +122,31 @@ h3 {
 .orange-nav-list {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* Even spacing 平均分布 */
+    flex-wrap: wrap; /*  允许在小屏幕自动换行 */
+    justify-content: center; /* Even spacing 平均分布 */
+    gap: 0.75rem 1.5rem; /*  上下间距 + 左右间距 */
     margin: 0;
-    padding: 0;
+    padding: 1rem;
+}
+
+/* 移动端导航优化：小屏幕垂直堆叠 */
+@media (max-width: 600px) {
+    .orange-nav-list {
+        flex-direction: column; /* 垂直排列每个导航项 */
+        align-items: center; /* 让每个 li 或 link 占满可用宽度 */
+        gap: 0.75rem; /* 上下间距 */
+    }
+
+    
+
+    .orange-nav-link {
+        display: block; /* 块级元素可占满整行 */
+        text-align: center; /* 文本居中 */
+        padding: 0.8rem 1rem; /* 增加内边距 */
+        font-size: 1.05rem; /* 稍微放大字体 */
+        border-radius: 6px;
+        width: 100%; /* 链接铺满整行 */
+    }
 }
 
 /* === Link style 链接样式 === */
