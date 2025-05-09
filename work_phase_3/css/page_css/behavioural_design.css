@@ -199,7 +199,6 @@ h3 {
     background-color: #388e3c; /* 深绿色悬停效果 */
 }
 
-
 /* === Section image styling (for design demos like CARD.png) 
      区块示意图样式（如 CARD.png 设计示例）=== */
 section img {
@@ -261,86 +260,61 @@ section img {
     opacity: 0.7;
 }
 
-/* === Form Container 表单容器 === */
-.form-wrapper {
-    background-color: #e6f9e6; /* Light green background 浅绿色背景 */
-    padding: 2rem; /* Inner spacing 内边距 */
-    border-radius: 16px; /* Rounded corners 圆角边框 */
-    max-width: 600px; /* Max width 最大宽度 */
-    margin: 2rem auto; /* Centered with margin 上下外边距并居中 */
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Subtle shadow 轻微阴影 */
+/* 表单整体布局 */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Fieldset Group 字段分组 === */
-form fieldset {
-    border: none; /* Remove default border 去除默认边框 */
-    margin-bottom: 1.5rem; /* Bottom margin 下边距 */
-    padding: 0; /* No padding 无内边距 */
-}
-
-/* === Legend Title 字段分组标题 === */
-form legend {
-    font-size: 1.2rem; /* Font size 字号 */
-    font-weight: 600; /* Bold 加粗 */
-    margin-bottom: 1rem; /* Bottom spacing 底部间距 */
-    color: #2a5934; /* Dark green 深绿色字体 */
-}
-
-/* === Labels 输入字段标题标签 === */
+/* 每一项输入字段的间距 */
 form label {
-    display: block; /* Block layout 块级布局 */
-    margin-bottom: 0.4rem; /* Bottom spacing 底部间距 */
-    font-weight: 500; /* Medium bold 中等加粗 */
-    color: #333; /* Dark gray text 深灰文字 */
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #333;
 }
 
-/* === Input Fields 所有输入框样式 === */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="file"] {
-    width: 100%; /* Full width 全宽 */
-    padding: 0.6rem 0.8rem; /* Inner padding 内边距 */
-    border: 1px solid #ccc; /* Light border 浅灰边框 */
-    border-radius: 8px; /* Rounded edges 圆角 */
-    font-size: 1rem; /* Font size 字体大小 */
-    box-sizing: border-box; /* Include padding in width 包含内边距宽度 */
-    margin-bottom: 1rem; /* Space between fields 字段之间间距 */
-    transition: border-color 0.3s; /* Smooth interaction 平滑过渡 */
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
-/* === Input Focus 输入框聚焦效果 === */
-form input:focus {
-    outline: none; /* Remove blue outline 去除默认外边框 */
-    border-color: #66bb6a; /* Green border 高亮绿色边框 */
-    box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2); /* Soft glow 绿色外发光 */
+/* 文本框和上传控件 hover 效果 */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #007acc;
+    box-shadow: 0 0 3px rgba(0, 122, 204, 0.4);
 }
 
-/* === Checkbox 复选框对齐 === */
-form input[type="checkbox"] {
-    margin-right: 0.5rem; /* Right margin 右侧间距 */
+/* 上传按钮样式 */
+form button[type="submit"] {
+    background-color: #007acc;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
 }
 
-/* === Submit Button 提交按钮样式 === */
-form button.btn {
-    background-color: #2a5934; /* Deep green 深绿色背景 */
-    color: white; /* White text 白色文字 */
-    padding: 0.6rem 1.4rem; /* Padding 内边距 */
-    border: none; /* No border 无边框 */
-    border-radius: 8px; /* Rounded corners 圆角按钮 */
-    font-size: 1rem; /* Font size 字体大小 */
-    cursor: pointer; /* Cursor pointer 鼠标指针样式 */
-    transition: background-color 0.3s; /* Hover transition 悬停过渡 */
+form button[type="submit"]:hover {
+    background-color: #005e99;
 }
 
-/* === Hover State 悬停按钮颜色变化 === */
-form button.btn:hover {
-    background-color: #1e4025; /* Darker green 更深绿色 */
-}
-
-/* === Feedback Message 提交反馈提示信息 === */
+/* 提交结果反馈区域 */
 #form-feedback {
-    margin-top: 1rem; /* Top margin 上边距 */
-    font-size: 0.95rem; /* Font size 字号 */
-    color: #cc0000; /* Error red 错误红色 */
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #006400;
 }

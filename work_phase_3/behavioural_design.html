@@ -294,47 +294,58 @@
                 </div>
 
                 <!-- Forms -->
-                <!-- 必须放在 behavioural_design.html 文件中 -->
-                <section>
-                    <h2>Community Form</h2>
+                <div class="design-section">
+                    <section>
+                        <h2>Community Form</h2>
 
-                    <!-- 提交结果反馈信息 -->
-                    <div id="form-feedback"></div>
+                        <!-- 提交结果反馈信息 -->
+                        <div id="form-feedback"></div>
 
-                    <!-- 表单本体 -->
-                    <form id="community-form" enctype="multipart/form-data">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" required />
+                        <!-- 表单本体 -->
+                        <form id="community-form" enctype="multipart/form-data">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name" required />
 
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" required />
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                required
+                            />
 
-                        <!-- 移动电话 Mobile -->
-                        <label for="mobile">Mobile:</label>
-                        <input type="tel" name="mobile" id="mobile" required />
+                            <!-- 移动电话 Mobile -->
+                            <label for="mobile">Mobile:</label>
+                            <input
+                                type="tel"
+                                name="mobile"
+                                id="mobile"
+                                required
+                            />
 
-                        <!-- 留言 Message -->
-                        <label for="message">Message:</label>
-                        <textarea
-                            name="message"
-                            id="message"
-                            rows="4"
-                            required
-                        ></textarea>
+                            <!-- 留言 Message -->
+                            <label for="message">Message:</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="4"
+                                required
+                            ></textarea>
 
-                        <!-- 上传照片 Upload -->
-                        <label for="photo">Upload Photo:</label>
-                        <input
-                            type="file"
-                            name="photo"
-                            id="photo"
-                            accept="image/png, image/*"
-                            required
-                        />
+                            <!-- 上传照片 Upload -->
+                            <label for="photo">Upload Photo:</label>
+                            <input
+                                type="file"
+                                name="photo"
+                                id="photo"
+                                accept="image/png, image/*"
+                                required
+                            />
 
-                        <button type="submit">Submit</button>
-                    </form>
-                </section>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </section>
+                </div>
             </div>
         </main>
 
