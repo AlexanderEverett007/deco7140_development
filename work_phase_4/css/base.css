@@ -1,118 +1,120 @@
-/* ======================
-    DEFINE COLOUR VARIABLES
-   ====================== */
+/* === CSS Base Styles for Mental Health Website === */
+
 :root {
-    --primary-color: #6a9fb5;
-    --accent-color: #c9b6e4;
-    --background-color:#EAFBE6;
-    --text-color: #333333;
+    /* === Color Palette === */
+    --color-primary: #4db6ac; /* Calm blue-green */
+    --color-accent: #ffb74d; /* Warm orange */
+    --color-support: #aed581; /* Soft green */
+    --color-highlight: #f06292; /* Gentle pink */
+
+    --color-bg: #f9f9f9; /* Page background */
+    --color-surface: #fffefa; /* Card background */
+    --color-border: #e0e0e0; /* Border grey */
+    --color-text: #333333; /* Main text */
+    --color-text-light: #666666; /* Secondary text */
+
+    --font-main: "Segoe UI", sans-serif;
+    --font-heading: "Segoe UI Semibold", sans-serif;
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
 }
 
-/* Apply Oswald font globally */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 body {
-    font-family: "Oswald", sans-serif; /* Use the Oswald font, with sans-serif as the fallback font.使用 Oswald 字体，sans-serif 作为备用字体 */
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    
 }
 
-/* Default styles (Mobile First) */
+/* === Container Layout === */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* === Typography Styles for Mental Health Website === */
+
 h1 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-family: var(--font-heading); /* Heading font 标题字体 */
+    font-size: 2.25rem; /* Large heading 大标题 */
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
 }
 
 h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-family: var(--font-heading);
+    font-size: 1.75rem; /* Section heading 分区标题 */
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
 }
 
 h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-size: 1.5rem; /* Subsection heading 子区标题 */
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-primary);
+}
+
+h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem; /* Minor heading 次级标题 */
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+h5 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem; /* Small heading 小标题 */
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
 }
 
 p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6; /* Improve readability 增加行间距 */
-    margin-bottom: 1rem; /* Add space between paragraphs 增加段落间距 */
-    color: var(--text-color); 
+    font-family: var(--font-main); /* Paragraph font 正文字体 */
+    font-size: 1rem; /* Body text size 正文字号 */
+    line-height: 1.6; /* Line spacing 行距 */
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
 }
 
-/* Desktop styles */
-@media screen and (min-width: 768px) {
+@media (max-width: 600px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
     }
-
     h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
         font-size: 1.5rem;
     }
+    h3 {
+        font-size: 1.3rem;
+    }
+    h4 {
+        font-size: 1.1rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
 }
-
-
-
-
-
-
-/* ======================
-    HELPER CLASSES
-    辅助类工具样式
-   ====================== */
-
-/* Margin helpers 外边距辅助类 */
-.mt-1 {
-    margin-top: 1rem;
-} /* Top margin 顶部外边距 */
-.m-t-3 {
-    margin-top: 3rem;
-} /* Top margin 顶部外边距 */
-.mb-1 {
-    margin-bottom: 1rem;
-} /* Bottom margin 底部外边距 */
-.ml-1 {
-    margin-left: 1rem;
-} /* Left margin 左侧外边距 */
-.mr-1 {
-    margin-right: 1rem;
-} /* Right margin 右侧外边距 */
-.my-1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-} /* Vertical margin 垂直方向外边距 */
-.mx-1 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-} /* Horizontal margin 水平方向外边距 */
-.m-1 {
-    margin: 1rem;
-} /* All sides margin 全部方向外边距 */
-
-/* Padding helpers 内边距辅助类 */
-.pt-1 {
-    padding-top: 1rem;
-} /* Top padding 顶部内边距 */
-.pb-1 {
-    padding-bottom: 1rem;
-} /* Bottom padding 底部内边距 */
-.pl-1 {
-    padding-left: 1rem;
-} /* Left padding 左侧内边距 */
-.pr-1 {
-    padding-right: 1rem;
-} /* Right padding 右侧内边距 */
-.py-1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-} /* Vertical padding 垂直方向内边距 */
-.px-1 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-} /* Horizontal padding 水平方向内边距 */
-.p-1 {
-    padding: 1rem;
-} /* All sides padding 全部方向内边距 */

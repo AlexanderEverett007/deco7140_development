@@ -4,24 +4,87 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- Google Fonts: Oswald -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/component_skeletons/navigation.css" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
+        <link rel="stylesheet" href="css/page_css/index.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon-32x32.png"
+        />
+
         <title>Work Phase 4</title>
     </head>
     <body>
-        <header>
-            <h1>Alexander Everett's Phase4</h1>
-        </header>
-        <section>
-            <h2>About this website</h2>
-            <article>
-                <p>
-                    I am working the contact task of the DECO7140 and this is
-                    the Phase4, just do it!
-                </p>
-            </article>
-        </section>
-        <section>
-            <h2>LINK</h2>
-            <a href="../index.html">Home</a>
-        </section>
+        <!-- === Accessible, Responsive Navigation 导航栏 === -->
+        <nav class="site-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">MindSpace</a>
+
+                <!-- Mobile toggle 控制菜单开关 -->
+                <input
+                    type="checkbox"
+                    id="nav-toggle"
+                    class="nav-toggle"
+                    aria-label="Toggle navigation menu"
+                />
+                <label
+                    for="nav-toggle"
+                    class="nav-toggle-label"
+                    aria-hidden="true"
+                    >☰</label
+                >
+
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li>
+                        <a href="Resources.html" class="nav-link">Resources</a>
+                    </li>
+                    <li><a href="Support.html" class="nav-link">Support</a></li>
+                    <li>
+                        <a href="Community.html" class="nav-link">Community</a>
+                    </li>
+                    <li>
+                        <a href="Daily Wellness.html" class="nav-link"
+                            >Daily Wellness</a
+                        >
+                    </li>
+                    <li>
+                        <a href="About Us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html" class="nav-link"
+                            >GenAI</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <header class="hero-header">
+                <div class="hero-overlay">
+                    <h1>Welcome to MindSpace</h1>
+                    <p>
+                        Supporting your journey to mental clarity and calm.<br />
+                        Reflect. Connect. Breathe.
+                    </p>
+                </div>
+            </header>
+        </main>
     </body>
 </html>
