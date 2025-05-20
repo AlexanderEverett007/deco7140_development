@@ -1,93 +1,85 @@
-/* === Responsive Navigation CSS for Mental Health Website === */
-
-.site-nav {
+/* === Navigation bar 主导航栏 === */
+.site-navbar {
     background-color: var(
         --color-primary
-    ); /* Navigation background 主导航背景色 */
-    color: white; /* Navigation text color 主导航文字颜色 */
-    padding: 0.75rem 0; /* Vertical padding 垂直内边距 */
+    ); /* Navigation bar background 导航栏背景 */
+    padding: 0.8rem 2rem;
 }
 
+/* Wrapper container 容器布局 */
 .nav-container {
-    max-width: 960px; /* Max width 最大宽度 */
-    margin: 0 auto; /* Center horizontally 水平居中 */
-    padding: 0 1rem; /* Horizontal padding 左右内边距 */
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center; /* Vertically center 元素垂直居中 */
-    justify-content: space-between; /* Space between logo and menu 左右分布 */
-    flex-wrap: wrap; /* Allow wrapping 允许换行 */
+    justify-content: space-between; /* Space between logo and menu 左右分散布局 */
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.nav-logo {
-    font-size: 1.4rem; /* Logo font size 标题字体大小 */
-    font-weight: bold;
+/* Logo styling 网站名称样式 */
+.nav-logo a {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
     color: white;
-    text-decoration: none; /* Remove underline 去除下划线 */
+    text-decoration: none;
 }
 
-/* Hide native checkbox 隐藏原始复选框 */
-.nav-toggle {
-    display: none;
-}
-
-/* Hamburger icon 汉堡按钮样式 */
-.nav-toggle-label {
-    display: none; /* Hidden by default 默认隐藏 */
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
-    margin-left: auto;
-}
-
-.nav-list {
-    list-style: none; /* Remove bullets 移除圆点 */
+/* Nav link list 导航链接列表 */
+.nav-links {
     display: flex;
-    gap: 1rem; /* Spacing between links 链接间距 */
+    gap: 2rem;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav-link {
+/* Nav link appearance 导航链接外观 */
+.nav-links a {
     color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
-.nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Hover effect 悬停背景 */
+/* Hover effect 悬停效果 */
+.nav-links a:hover {
+    opacity: 0.75;
 }
 
-/* === Mobile Styles 移动端样式 === */
+/* Active page highlighting 当前页面高亮 */
+.nav-links a.active {
+    border-bottom: 3px solid white;
+}
+
+/* Mobile toggle button 汉堡按钮 */
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* === Responsive for small screens 小屏适配 === */
 @media (max-width: 768px) {
-    .nav-toggle-label {
-        display: block; /* Show hamburger menu 显示汉堡图标 */
+    .nav-toggle {
+        display: block;
     }
 
-    .nav-list {
-        display: none; /* Hide nav by default 默认隐藏导航 */
+    .nav-links {
+        display: none;
+        flex-direction: column;
         width: 100%;
-        flex-direction: column; /* Stack vertically 垂直堆叠 */
         margin-top: 1rem;
-        gap: 0.5rem;
     }
 
-    /* Show nav list when checkbox is checked 点击展开菜单 */
-    .nav-toggle:checked + .nav-toggle-label + .nav-list {
+    .nav-links.show {
         display: flex;
     }
 
-    .nav-link {
-        width: 100%; /* Full width link 链接占满整行 */
-        background-color: var(--color-primary);
-        padding: 0.75rem 1rem;
-        border-radius: 0;
-        text-align: left; /* Align text left 文本左对齐 */
-    }
-
-    .nav-link:hover {
-        background-color: var(--color-accent); /* Hover accent 悬停强调色 */
-        color: white;
+    .nav-links li {
+        margin-bottom: 0.8rem;
     }
 }
