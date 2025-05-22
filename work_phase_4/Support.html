@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/component_skeletons/navigation.css" />
         <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
+        <link rel="stylesheet" href="css/page_css/Support.css" />
 
         <link
             rel="icon"
@@ -30,79 +31,101 @@
     </head>
     <body>
         <!-- === Accessible, Responsive Navigation 导航栏 === -->
-        <nav class="site-nav" aria-label="Main Navigation">
+        <nav class="site-navbar" aria-label="Main Navigation">
             <div class="nav-container">
-                <a href="index.html" class="nav-logo">MindSpace</a>
+                <div class="nav-logo">
+                    <a href="index.html">MindSpace</a>
+                </div>
 
-                <!-- Mobile toggle 控制菜单开关 -->
-                <input
-                    type="checkbox"
-                    id="nav-toggle"
-                    class="nav-toggle"
-                    aria-label="Toggle navigation menu"
-                />
-                <label
-                    for="nav-toggle"
-                    class="nav-toggle-label"
-                    aria-hidden="true"
-                    >☰</label
-                >
+                <!-- Toggle button for mobile 小屏展开按钮 -->
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    ☰
+                </button>
 
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li>
-                        <a href="Resources.html" class="nav-link">Resources</a>
-                    </li>
-                    <li><a href="Support.html" class="nav-link">Support</a></li>
-                    <li>
-                        <a href="Community.html" class="nav-link">Community</a>
-                    </li>
-                    <li>
-                        <a href="Daily Wellness.html" class="nav-link"
-                            >Daily Wellness</a
-                        >
-                    </li>
-                    <li>
-                        <a href="About Us.html" class="nav-link">About Us</a>
-                    </li>
-                    <li>
-                        <a href="genai_mt_acknowledgement.html" class="nav-link"
-                            >GenAI</a
-                        >
-                    </li>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="Support.html">Support</a></li>
+                    <li><a href="Community.html">Community</a></li>
+                    <li><a href="Daily Wellness.html">Daily Wellness</a></li>
+                    <li><a href="About Us.html">About Us</a></li>
+                    <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
                 </ul>
             </div>
         </nav>
 
         <main>
-            <div class="container">
-                <h1>WP3 Home Page</h1>
+            <section class="appointment-section">
+                <h2>📅 Book an Appointment</h2>
+                <p>
+                    Need to talk to someone? Book a session with our support
+                    team.
+                </p>
 
-                <section class="mt-1">
-                    <h2>About This Site</h2>
-                    <p>
-                        This website proposal outlines the design and structure
-                        of a responsive, user-friendly platform focused on
-                        mental health awareness and support. The proposed site
-                        aims to provide accessible resources, interactive tools,
-                        and clear navigation to help users better understand
-                        mental wellbeing and connect with supportive services.
-                    </p>
-                    <p>
-                        The design emphasizes clarity, calmness, and inclusivity
-                        through thoughtful color schemes, intuitive layouts, and
-                        mobile-friendly responsiveness. Special attention has
-                        been given to accessibility and ethical design, ensuring
-                        that all users—regardless of age or background—can
-                        easily engage with the site.
-                    </p>
-                    <p>
-                        This blueprint represents the foundation for a site that
-                        is not only visually appealing, but also functional and
-                        meaningful in promoting mental wellness.
-                    </p>
-                </section>
-            </div>
+                <form class="appointment-form" action="#" method="post">
+                    <!-- Service Type 服务类型选择 -->
+                    <label for="service">Service Type</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="general">General Counseling</option>
+                        <option value="crisis">Crisis Support</option>
+                        <option value="career">Career Advice</option>
+                    </select>
+
+                    <!-- Preferred Date 预约日期 -->
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required />
+
+                    <!-- Preferred Time 预约时间 -->
+                    <label for="time">Preferred Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">-- Select a time --</option>
+                        <option>9:00 AM – 10:00 AM</option>
+                        <option>10:00 AM – 11:00 AM</option>
+                        <option>1:00 PM – 2:00 PM</option>
+                        <option>3:00 PM – 4:00 PM</option>
+                    </select>
+
+                    <!-- Name 姓名 -->
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    />
+
+                    <!-- Email 邮箱 -->
+                    <label for="email">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    />
+
+                    <!-- Additional Notes 附加信息 -->
+                    <label for="notes">Additional Notes (optional)</label>
+                    <textarea
+                        id="notes"
+                        name="notes"
+                        rows="4"
+                        placeholder="Describe your concern..."
+                    ></textarea>
+
+                    <!-- Submit Button 提交按钮 -->
+                    <button type="submit" class="submit-btn">
+                        Book Appointment
+                    </button>
+                </form>
+                <div id="appointment-success" class="success-message" style="display: none;"></div>
+            </section>
         </main>
+        <!-- 引入 JS 脚本 -->
+        <script src="js/nav.js"></script>
+        <script type="module" src="js/Support.js"></script>
+
     </body>
 </html>

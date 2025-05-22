@@ -1,0 +1,189 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #f1f8e9, #e0f7fa); /* 新背景 */
+    color: #333;
+}
+
+/* === Main Section 主内容区域 === */
+.main-content {
+    padding: 3rem 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.articles-section h1 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 2rem;
+}
+
+/* === Grid Layout 卡片排列 === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* === Card 样式 === */
+.card {
+    background-color: #ffffffcc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: #004d40;
+    margin-bottom: 0.8rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #00897b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* === Coping Strategies Section 应对策略样式 === */
+.coping-section {
+    padding: 3rem 2rem;
+    background-color: #f0fdf4; /* Calm green 背景 */
+    border-radius: 16px;
+    margin: 2rem 0;
+}
+
+.coping-title {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* 卡片布局 */
+.coping-strategies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* 单张卡片 */
+.strategy-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-6px);
+}
+
+/* 图标样式 */
+.strategy-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* 文本样式 */
+.strategy-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #2e7d32;
+}
+
+.strategy-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* 链接样式 */
+.coping-link {
+    color: #2e7d32;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.coping-link:hover {
+    text-decoration: underline;
+}
+
+/* Guided Meditation Audios Section 横向冥想卡片样式 */
+.guided-meditation {
+    margin: 3rem 1rem;
+}
+
+/* Section heading 标题样式 */
+.guided-meditation h2 {
+    font-size: 1.5rem;
+    color: #1a4d3c;
+    margin-bottom: 1.5rem;
+}
+
+/* Horizontal card container 横向卡片容器 */
+.meditation-card {
+    display: flex; /* Horizontal layout 横向布局 */
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.meditation-card:hover {
+    transform: translateY(-5px); /* Hover effect 悬浮时上浮 */
+}
+
+/* Icon style 图标样式 */
+.meditation-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+/* Text and audio container 内容与播放器容器 */
+.meditation-content {
+    flex: 1;
+}
+
+.meditation-content h3 {
+    margin: 0 0 0.25rem;
+    color: #1b4332;
+    font-size: 1.25rem;
+}
+
+.meditation-content p {
+    margin: 0 0 0.5rem;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.meditation-content audio {
+    width: 100%;
+}

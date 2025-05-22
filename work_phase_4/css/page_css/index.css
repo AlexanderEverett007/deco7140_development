@@ -64,9 +64,6 @@
     }
 }
 
-
-
-
 /* Background image section 背景图区域 */
 .hero-background {
     position: relative;
@@ -83,5 +80,53 @@
     height: 100%;
     object-fit: cover; /* Stretch & crop image 填充并裁切图片 */
     z-index: -1; /* Push image behind content 图片置于底层 */
-    
+}
+
+/* === Quick Access Container Styles 快速入口模块样式 === */
+.quick-access-card {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.8
+    ); /* Semi-transparent white 半透明白背景 */
+    border-radius: 20px; /* Rounded corners 圆角 */
+    padding: 1rem 1.5rem; /* Inner spacing 内边距 */
+    margin: 1rem 0 0 6vw; /* Top and left spacing 上边距和左对齐 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow 阴影 */
+    max-width: 700px; /* Limit width 限制最大宽度 */
+    max-height: 100px;
+}
+
+/* === Title Styling 标题样式 === */
+.quick-access-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary); /* Calm blue-green 主色调 */
+    margin-bottom: 1rem;
+}
+
+/* === Button Container 按钮布局 === */
+.quick-access-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Wrap to new line 自动换行 */
+    gap: 0.75rem; /* Spacing between buttons 按钮间距 */
+}
+
+/* === Individual Buttons 单个按钮样式 === */
+.quick-btn {
+    background-color: var(--color-support); /* Soft green 柔和绿色 */
+    border: none;
+    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow 轻阴影 */
+    transition: background-color 0.3s ease;
+    text-decoration: none;  /* ✅ Remove underline 删除下划线 */
+}
+
+.quick-btn:hover {
+    background-color: #9ccc65; /* Hover green 悬停变色 */
 }
