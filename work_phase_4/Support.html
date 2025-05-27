@@ -120,12 +120,164 @@
                         Book Appointment
                     </button>
                 </form>
-                <div id="appointment-success" class="success-message" style="display: none;"></div>
+                <div
+                    id="appointment-success"
+                    class="success-message"
+                    style="display: none"
+                ></div>
+            </section>
+
+            <section class="chatbot-section">
+                <h2>🤖 AI Chatbot for Immediate Help</h2>
+                <div class="chat-window" id="chat-window"></div>
+
+                <form id="chat-form" class="chat-form">
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Type your message..."
+                        required
+                    />
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+
+            <!-- Emergency contacts -->
+            <section
+                class="emergency-contacts"
+                aria-labelledby="emergency-heading"
+            >
+                <h2 id="emergency-heading">📞 Emergency Contacts</h2>
+
+                <div class="contact-row">
+                    <span class="contact-icon" aria-hidden="true">🏫</span>
+                    <div class="contact-info">
+                        <h3>UQ Student Support</h3>
+                        <p>07 3365 1704</p>
+                    </div>
+                    <a
+                        href="tel:0733651704"
+                        class="call-btn"
+                        aria-label="Call UQ Student Support at 07 3365 1704"
+                        >Call</a
+                    >
+                </div>
+
+                <div class="contact-row">
+                    <span class="contact-icon" aria-hidden="true">💬</span>
+                    <div class="contact-info">
+                        <h3>Beyond Blue</h3>
+                        <p>1300 22 4636</p>
+                    </div>
+                    <a
+                        href="tel:1300224636"
+                        class="call-btn"
+                        aria-label="Call Beyond Blue at 1300 22 4636"
+                        >Call</a
+                    >
+                </div>
+
+                <div class="contact-row">
+                    <span class="contact-icon" aria-hidden="true">📞</span>
+                    <div class="contact-info">
+                        <h3>Lifeline Australia</h3>
+                        <p>13 11 14</p>
+                    </div>
+                    <a
+                        href="tel:131114"
+                        class="call-btn"
+                        aria-label="Call Lifeline Australia at 13 11 14"
+                        >Call</a
+                    >
+                </div>
+
+                <div class="contact-row">
+                    <span class="contact-icon" aria-hidden="true">🚨</span>
+                    <div class="contact-info">
+                        <h3>Emergency (Police, Fire, Ambulance)</h3>
+                        <p>000</p>
+                    </div>
+                    <a
+                        href="tel:000"
+                        class="call-btn"
+                        aria-label="Call Emergency services at 000"
+                        >Call</a
+                    >
+                </div>
+            </section>
+            
+            <!-- FAQs -->
+            <section class="faqs" aria-labelledby="faq-heading">
+                <h2 id="faq-heading">❓ Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <button
+                        class="faq-question"
+                        aria-expanded="false"
+                        aria-controls="faq1"
+                        id="q1"
+                    >
+                        <span class="faq-icon" aria-hidden="true">▶</span>
+                        How do I book a counseling appointment?
+                    </button>
+                    <div
+                        class="faq-answer"
+                        id="faq1"
+                        role="region"
+                        aria-labelledby="q1"
+                        hidden
+                    >
+                        You can use the form above or call 07 3365 1704 to book
+                        an appointment.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button
+                        class="faq-question"
+                        aria-expanded="false"
+                        aria-controls="faq2"
+                        id="q2"
+                    >
+                        <span class="faq-icon" aria-hidden="true">▶</span>
+                        Is the AI chatbot available at night?
+                    </button>
+                    <div
+                        class="faq-answer"
+                        id="faq2"
+                        role="region"
+                        aria-labelledby="q2"
+                        hidden
+                    >
+                        Yes, the chatbot is available 24/7 for quick support.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button
+                        class="faq-question"
+                        aria-expanded="false"
+                        aria-controls="faq3"
+                        id="q3"
+                    >
+                        <span class="faq-icon" aria-hidden="true">▶</span>
+                        What should I do in a mental health emergency?
+                    </button>
+                    <div
+                        class="faq-answer"
+                        id="faq3"
+                        role="region"
+                        aria-labelledby="q3"
+                        hidden
+                    >
+                        Call 000 immediately or contact Lifeline at 13 11 14.
+                    </div>
+                </div>
             </section>
         </main>
         <!-- 引入 JS 脚本 -->
         <script src="js/nav.js"></script>
         <script type="module" src="js/support.js"></script>
-
     </body>
 </html>

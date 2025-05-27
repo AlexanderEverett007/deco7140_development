@@ -1,0 +1,69 @@
+/* 🟢 Forum section styling | 论坛区域整体样式 */
+.question-form {
+    max-width: 700px; /* Set max width for form container | 设置表单最大宽度 */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f7fdf9; /* Light mint background | 淡绿色背景 */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow | 细微阴影 */
+}
+
+/* 🟢 Form layout | 表单布局 */
+.question-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Spacing between fields | 字段间间距 */
+}
+
+/* 🟢 Input and textarea styling | 输入框与文本域样式 */
+.question-form input,
+.question-form textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #cddede;
+    border-radius: 8px;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.question-form input:focus,
+.question-form textarea:focus {
+    border-color: #2ab795; /* Highlight on focus | 聚焦时高亮边框 */
+    outline: none;
+}
+
+/* 🟢 Submit button | 提交按钮样式 */
+.question-form button[type="submit"] {
+    background-color: #2ab795;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.question-form button[type="submit"]:hover {
+    background-color: #219d81;
+}
+
+/* 🟢 Feedback message | 提交反馈提示 */
+#form-feedback {
+    font-size: 0.95rem;
+    margin-top: -0.5rem;
+    color: #dc3545; /* Red for errors | 错误提示红色 */
+}
+
+#form-feedback.success {
+    color: #28a745; /* Green for success | 成功提示绿色 */
+}
+
+/* 🟢 Responsive layout | 响应式设计 */
+@media (max-width: 600px) {
+    .question-form {
+        padding: 1rem;
+    }
+}

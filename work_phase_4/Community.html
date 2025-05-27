@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/component_skeletons/navigation.css" />
         <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
-        <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/page_css/Community.css" />
 
         <link
             rel="icon"
@@ -55,44 +55,60 @@
         </nav>
 
         <main>
-            <section class="hero-background">
-                <img
-                    src="assets/image/index/background.jpg"
-                    alt=""
-                    class="hero-bg-img"
-                />
+            <section class="question-form" aria-labelledby="question-heading">
+                <h2 id="question-heading">💬 Question Forums</h2>
 
-                <!-- ✅ Unified Quick Access Block 统一快速入口区域 -->
-                <div class="quick-access-card">
-                    <h2 class="quick-access-title">Quick Access</h2>
-                    <div class="quick-access-buttons">
-                        <button class="quick-btn">
-                            Mental Health Articles
-                        </button>
-                        <button class="quick-btn">Mood Tracker</button>
-                        <button class="quick-btn">Emergency Contacts</button>
-                        <button class="quick-btn">AI Chatbot</button>
-                    </div>
-                </div>
+                <form id="question-form" class="question-form">
+                    <label for="name-input" class="visually-hidden"
+                        >Your Name</label
+                    >
+                    <input
+                        type="text"
+                        id="name-input"
+                        name="product_name"
+                        placeholder="Your Name"
+                        aria-label="Your Name"
+                        required
+                    />
 
-                <header class="hero-header">
-                    <div class="hero-overlay">
-                        <h1>Welcome to MindSpace</h1>
-                        <p>
-                            Supporting your journey to mental clarity and
-                            calm.<br />
-                            Reflect. Connect. Breathe.
-                        </p>
-                    </div>
+                    <label for="email-input" class="visually-hidden"
+                        >Your Email</label
+                    >
+                    <input
+                        type="email"
+                        id="email-input"
+                        name="product_owner"
+                        placeholder="Your Email"
+                        aria-label="Your Email"
+                        required
+                    />
 
+                    <label for="message-input" class="visually-hidden"
+                        >Your Message</label
+                    >
+                    <textarea
+                        id="message-input"
+                        name="product_description"
+                        rows="3"
+                        placeholder="Type your question here..."
+                        aria-label="Your Message"
+                        required
+                    ></textarea>
 
-                    
-                </header>
-
-                
+                    <button type="submit" aria-label="Submit your question">
+                        Submit
+                    </button>
+                    <p
+                        id="form-feedback"
+                        role="alert"
+                        aria-live="polite"
+                        style="margin-top: 10px"
+                    ></p>
+                </form>
             </section>
         </main>
         <!-- 引入 JS 脚本 -->
-        <script src="js/nav.js"></script>
+        <script type="module" src="js/nav.js"></script>
+        <script type="module" src="js/community.js"></script>
     </body>
 </html>

@@ -1,0 +1,46 @@
+/* GenAI 页面背景和容器样式 */
+.genai-section {
+    background: linear-gradient(
+        to bottom right,
+        #d0f5f2,
+        #e6f7f4
+    ); /* 柔和蓝绿色渐变背景 */
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.genai-container {
+    background-color: #fefefe;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.7;
+}
+
+.genai-container h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 25px;
+}
+
+.genai-container h3 {
+    color: #004d40;
+    margin-top: 30px;
+}
+
+.genai-container ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.genai-container li {
+    margin-bottom: 10px;
+}
+
+.genai-container p {
+    margin-top: 15px;
+    color: #333;
+}

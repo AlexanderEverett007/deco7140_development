@@ -1,3 +1,15 @@
+/* English: Set background color for the support page */
+/* 中文：为支持页面设置背景颜色 */
+main {
+    background: linear-gradient(
+        to bottom right,
+        #e6f7f2,
+        #d3f4ed
+    ); /* 柔和绿色渐变 */
+    min-height: 100vh; /* 保证背景铺满页面 */
+    padding: 2rem;
+}
+
 /* 📅 Appointment Section 预约模块整体 */
 .appointment-section {
     margin: 3rem 1rem;
@@ -66,4 +78,187 @@
     border-radius: 8px;
     color: #1b5e20;
     font-weight: bold;
+}
+
+/* 🤖 Chatbot Module 聊天模块整体样式 */
+.chatbot-section {
+    margin: 3rem 1rem;
+}
+
+.chat-window {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chat-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.chat-form button {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    background-color: #007b55;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-bubble {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    max-width: 75%;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #d1e7dd;
+}
+
+.bot {
+    align-self: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+/* 📞 Emergency Contacts Section */
+.emergency-contacts {
+    margin: 3rem 1rem;
+}
+
+.emergency-contacts h2 {
+    font-size: 1.5rem;
+    color: #1a4d3c;
+    margin-bottom: 1.5rem;
+}
+
+/* 🔹 Contact Row 横向信息条 */
+.contact-row {
+    display: flex;
+    align-items: center;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 👈 Icon 图标样式 */
+.contact-icon {
+    font-size: 1.8rem;
+}
+
+/* 📋 联系信息 */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1b4332;
+}
+
+.contact-info p {
+    margin: 0.3rem 0 0;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* 📞 Call 按钮 */
+.call-btn {
+    background-color: #007b55;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+    background-color: #005e42;
+}
+
+/*FAQs*/
+.faqs {
+    margin: 3rem 1rem;
+    max-width: 700px;
+}
+
+.faqs h2 {
+    font-size: 1.6rem;
+    color: #135c4b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #e8f5e9;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    color: #00695c;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+    background-color: #c8e6c9;
+    outline: 2px solid #007b55;
+}
+
+.faq-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* 展开区域动画 */
+.faq-answer {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-answer[hidden] {
+    padding: 0 1rem;
+    max-height: 0;
+}
+
+.faq-answer:not([hidden]) {
+    max-height: 200px;
+    padding: 1rem;
 }

@@ -1,0 +1,73 @@
+/* 🟢 About Us section wrapper | 整体区域背景 */
+.about-section {
+    min-height: 78.3vh; /* 💡 确保背景铺满整个视口高度 */
+    background: linear-gradient(
+        to bottom right,
+        #d4f8e8,
+        #b2ebd2
+    ); /* 渐变背景 */
+    padding: 4rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 内容居中 */
+    
+}
+
+/* 🟢 Title Styling | 标题样式 */
+.about-section h2 {
+    color: #007f5f;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* 🟢 Card Container | 内容卡片样式 */
+.about-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* 阴影使其更有立体感 */
+    text-align: left;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 🟢 Text content | 文本排版 */
+.about-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* 🟢 Team Section */
+.team-section h3 {
+    color: #007f5f;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.team-list {
+    list-style-type: circle;
+    padding-left: 1.5rem;
+    color: #444;
+}
+
+.team-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* 🟢 Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
