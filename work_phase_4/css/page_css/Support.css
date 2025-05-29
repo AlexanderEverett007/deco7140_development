@@ -1,3 +1,19 @@
+/* ============================
+   Support Page Header Title
+   ============================ */
+.support-page-heading {
+    background-color: #e6f7f2; /* 同页面底色 */
+    padding: 40px 40px 0 40px; /* 上下左右内边距 */
+    text-align: left;
+}
+
+.support-page-heading h1 {
+    font-size: 2.5rem;       /* 大标题字体 */
+    color: #0f766e;          /* 深绿色，与页面风格一致 */
+    font-weight: bold;
+    margin: 0;
+}
+
 /* English: Set background color for the support page */
 /* 中文：为支持页面设置背景颜色 */
 main {

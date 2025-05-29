@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/component_skeletons/navigation.css" />
         <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
-        <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/page_css/Daily Wellness.css" />
 
         <link
             rel="icon"
@@ -55,12 +55,151 @@
         </nav>
 
         <main>
-            
+            <section class="daily-wellness" id="daily-wellness">
+                <h1>Daily Wellness</h1>
 
+                <!-- Sticky Notes Navigation -->
+                <div class="sticky-notes-container">
+                    <a href="#quotes" class="sticky-note"
+                        >Inspirational Quotes</a
+                    >
+                    <a href="#gratitude-journal" class="sticky-note">Gratitude Journal</a>
+                    <a href="#events-container" class="sticky-note"
+                        >Community Events</a
+                    >
+                </div>
 
-            
+                <!-- Section 1: Quotes -->
+                <section id="quotes" class="wellness-section">
+                    <h3>Inspirational Quotes</h3>
+                    <div class="quote-card">
+                        <p class="quote-text">
+                            “The best way to predict the future is to create
+                            it.”
+                        </p>
+                        <p class="quote-author">– Abraham Lincoln</p>
+                    </div>
+
+                    <div class="quote-card">
+                        <p class="quote-text">
+                            “Keep your face always toward the sunshine—and
+                            shadows will fall behind you.”
+                        </p>
+                        <p class="quote-author">– Walt Whitman</p>
+                    </div>
+
+                    <div class="quote-card">
+                        <p class="quote-text">
+                            “Believe you can and you're halfway there.”
+                        </p>
+                        <p class="quote-author">– Theodore Roosevelt</p>
+                    </div>
+                </section>
+
+                <!-- Section 3: Gratitude Journal -->
+                <section
+                    id="gratitude-journal"
+                    class="wellness-section gratitude-display-section"
+                >
+                    <h3>Gratitude Journal</h3>
+                    <p class="gratitude-intro">
+                        Discover what others are thankful for today ❤️
+                    </p>
+
+                    <!-- Story 1: Sunshine after illness -->
+                    <div class="gratitude-card">
+                        <img
+                            src="assets/image/Daily Wellness/Sunny.jpg"
+                            alt="Sunshine"
+                            class="gratitude-img"
+                        />
+                        <div class="gratitude-content">
+                            <p class="gratitude-text">
+                                “After recovering from a long illness that kept
+                                me in bed for months, I finally stepped outside
+                                yesterday and felt the sun on my skin. That
+                                simple warmth brought tears to my eyes. I’m
+                                deeply grateful for my body’s ability to heal,
+                                for the friends who checked in on me even when I
+                                didn’t have the energy to reply, and for the
+                                nurses who always smiled, no matter how tired
+                                they were. I used to take walking and breathing
+                                easily for granted, but now every step feels
+                                like a victory. The sunlight reminded me that
+                                brighter days do come — and that even in
+                                stillness, healing is quietly happening. I’ll
+                                never forget the strength I found in small,
+                                ordinary things.”
+                            </p>
+                            <p class="gratitude-author">– Emily, 22</p>
+                        </div>
+                    </div>
+
+                    <!-- Story 2: Lost wallet & kindness -->
+                    <div class="gratitude-card">
+                        <img
+                            src="assets/image/Daily Wellness/Help.jpg"
+                            alt="Helping hand"
+                            class="gratitude-img"
+                        />
+                        <div class="gratitude-content">
+                            <p class="gratitude-text">
+                                “Last week, I left my wallet on a bus without
+                                realizing it. It had my student ID, rent money,
+                                and my grandfather’s photo. I felt crushed when
+                                I noticed it missing. But that evening, a kind
+                                stranger found my wallet and tracked me down
+                                through social media. He dropped it at my
+                                university security desk with everything
+                                untouched. I couldn’t believe it. I didn’t know
+                                his name, but his action restored my faith in
+                                humanity. I’m grateful not only for the return
+                                of my belongings but for the reminder that
+                                kindness still exists, quietly and powerfully.
+                                It made me reflect on how I treat others in
+                                small moments — and how meaningful it is to pay
+                                goodness forward.”
+                            </p>
+                            <p class="gratitude-author">– Ryan, 19</p>
+                        </div>
+                    </div>
+
+                    <!-- Story 3: Reconnecting with family -->
+                    <div class="gratitude-card">
+                        <img
+                            src="assets/image/Daily Wellness/Rebuild Trust.jpg"
+                            alt="Family"
+                            class="gratitude-img"
+                        />
+                        <div class="gratitude-content">
+                            <p class="gratitude-text">
+                                “For years, my relationship with my father was
+                                cold and distant. We argued often and rarely
+                                spoke outside of holidays. But recently, he
+                                called me out of the blue — not to argue, but to
+                                ask if I’d like to go fishing, something we used
+                                to do when I was a kid. That day on the lake, we
+                                barely spoke at first. Then slowly, over the hum
+                                of nature and shared memories, something
+                                softened. We laughed. We even cried a little.
+                                I’m grateful we’re finding our way back to each
+                                other. Rebuilding trust isn’t easy, but I
+                                believe it’s worth it. That one quiet afternoon
+                                on the water gave me hope for our future. And
+                                for that, I’m truly thankful.”
+                            </p>
+                            <p class="gratitude-author">– Jasmine, 25</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- event arrangement活动安排 -->
+                <h1>Community Events</h1>
+                <div id="events-container"></div>
+            </section>
         </main>
         <!-- 引入 JS 脚本 -->
-        <script src="js/nav.js"></script>
+        <script type="module" src="js/modules/nav.js"></script>
+        <script type="module" src="js/daily wellness.js"></script>
     </body>
 </html>

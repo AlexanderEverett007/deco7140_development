@@ -1,69 +1,374 @@
-/* 🟢 Forum section styling | 论坛区域整体样式 */
-.question-form {
-    max-width: 700px; /* Set max width for form container | 设置表单最大宽度 */
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #f7fdf9; /* Light mint background | 淡绿色背景 */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow | 细微阴影 */
+/* ============================
+Global Styles — 页面基础样式
+   ============================ */
+body {
+    background-color: #f0fdf4; /* Light gray background — 柔和的灰白背景 */
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111827;
 }
 
-/* 🟢 Form layout | 表单布局 */
-.question-form form {
+/* ============================
+Community Header Box — 社区标题盒子容器
+   ============================ */
+.community-box {
+    background-color: #ffffff; /* White background — 白色背景增强分层感 */
+    padding: 24px 28px; /* Internal padding — 内边距 */
+    border-radius: 12px; /* Rounded corners — 圆角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow — 柔和阴影 */
+    max-width: 500px; /* Limit width to left portion — 限定宽度为左小块 */
+    margin-left: 40px; /* Offset from left — 靠左显示 */
+    color: #065f46;
+}
+
+/* ============================
+Community Header Section — 社区页面顶部标题区
+   ============================ */
+.community-header {
+    background-color: #f0fdf4; /* Soft green background — 柔和浅绿色背景 */
+    padding: 40px 20px;
+    text-align: left; /* Align text to the left — 文本左对齐 */
+}
+
+/* Content wrapper aligned to the left — 内容区域靠左显示 */
+.community-header-content {
+    max-width: 500px; /* Limit width to left portion — 限定在左侧区域宽度 */
+    margin-left: 40px; /* Add spacing from the left — 左侧边距 */
+    color: #065f46;
+    text-align: left;
+}
+
+/* Page heading — 页面主标题样式 */
+.community-header h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* Introductory paragraph — 引导段落样式 */
+.community-header p {
+    font-size: 18px;
+    color: #064e3b;
+    line-height: 1.7;
+}
+
+/* ============================
+Slide-in Animation — 从左滑入动画
+   ============================ */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0; /* Invisible at start — 初始状态透明 */
+        transform: translateX(-60px); /* Offset to the left — 向左偏移60像素 */
+    }
+    100% {
+        opacity: 1; /* Fully visible — 完全可见 */
+        transform: translateX(0); /* Return to normal position — 回归原位 */
+    }
+}
+
+/* Apply animation on load — 应用于加载时的动画 */
+.slide-in-left {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* 👥 Community 标题左对齐（已包在 .community-box 中） */
+.community-box h1 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    margin-left: 0; /* 去除意外居中对齐可能带来的影响 */
+}
+
+/* 📢 Share Your Story 标题左对齐 */
+#share-story h2 {
+    text-align: left;
+    font-size: 28px;
+    margin-left: 40px; /* 与 community-box 的 margin-left 对齐 */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Forum */
+/* Forum */
+/* ===== Chat Section 外部容器 ===== */
+.chat-section {
+    background-color: #3a86ff;
+    padding: 40px 20px;
+    max-width: 1610px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: "Segoe UI", sans-serif;
+}
+
+.chat-section h2 {
+    font-size: 1.8rem;
+    color: #f1faee;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* ===== Form 样式 ===== */
+.chat-form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem; /* Spacing between fields | 字段间间距 */
+    gap: 16px;
 }
 
-/* 🟢 Input and textarea styling | 输入框与文本域样式 */
-.question-form input,
-.question-form textarea {
-    font-size: 1rem;
-    padding: 0.75rem;
-    border: 1px solid #cddede;
+.chat-input,
+.chat-textarea {
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
     border-radius: 8px;
-    font-family: inherit;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s;
 }
 
-.question-form input:focus,
-.question-form textarea:focus {
-    border-color: #2ab795; /* Highlight on focus | 聚焦时高亮边框 */
+.chat-input:focus,
+.chat-textarea:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.chat-button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-button:hover {
+    background-color: #059669;
+}
+
+.chat-feedback {
+    margin-top: 12px;
+    color: #065f46;
+    font-weight: 500;
+}
+
+/* Mood container base style */
+/* Mood container base style */
+.mood-container {
+    background: linear-gradient(135deg, #e9fdf6, #dff9f0);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 720px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.mood-header h3 {
+    font-size: 2rem;
+    color: #009688;
+    margin-bottom: 0.5rem;
+}
+
+.mood-instruction {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.mood-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.mood-option {
+    background-color: #fff6d7;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mood-option:hover,
+.mood-option:focus {
+    background-color: #ffe48a;
+    transform: translateY(-3px) scale(1.05);
     outline: none;
 }
 
-/* 🟢 Submit button | 提交按钮样式 */
-.question-form button[type="submit"] {
-    background-color: #2ab795;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 0.75rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.mood-option:active {
+    transform: scale(0.95);
+    background-color: #ffd95c;
 }
 
-.question-form button[type="submit"]:hover {
-    background-color: #219d81;
+/* Highlight the selected mood button */
+.mood-option.selected {
+    background-color: #ffcc66;
+    border: 2px solid #e69500;
+    color: #222;
+    box-shadow: 0 0 10px rgba(255, 170, 0, 0.4);
 }
 
-/* 🟢 Feedback message | 提交反馈提示 */
-#form-feedback {
+/* Feedback text after click */
+.mood-feedback {
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #00796b;
+}
+
+/* Bottom note */
+.mood-note {
+    margin-top: 2rem;
     font-size: 0.95rem;
-    margin-top: -0.5rem;
-    color: #dc3545; /* Red for errors | 错误提示红色 */
+    color: #666;
+    font-style: italic;
+    text-align: left;
 }
 
-#form-feedback.success {
-    color: #28a745; /* Green for success | 成功提示绿色 */
-}
-
-/* 🟢 Responsive layout | 响应式设计 */
 @media (max-width: 600px) {
-    .question-form {
-        padding: 1rem;
+    .mood-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*Share Your Story Section — 整体容器样式*/
+#share-story {
+    padding: 40px 20px;
+    background-color: #f0fdf4; /* Light mint green — 清新的浅绿色背景 */
+    color: #065f46;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Section Title — 标题样式 */
+#share-story h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ============================
+   Wrapper for Form + Stories — 横向布局容器
+   ============================ */
+.story-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* ============================
+   Form Section — 表单样式
+   ============================ */
+#community-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#community-form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+#community-form input,
+#community-form textarea {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+#community-form input:focus,
+#community-form textarea:focus {
+    outline: none;
+    border-color: #10b981; /* Green border on focus */
+}
+
+#community-form button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#community-form button:hover {
+    background-color: #059669;
+}
+
+#form-feedback {
+    font-size: 14px;
+    color: #047857;
+    margin-top: 10px;
+}
+
+/* ============================
+   Story Display Cards — 右侧留言卡片
+   ============================ */
+#story-container {
+    flex: 2;
+    min-width: 300px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#story-container div[role="listitem"] {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#story-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#story-container p {
+    margin: 4px 0;
+}
+
+/* ============================
+   Responsive — 响应式适配
+   ============================ */
+@media (max-width: 768px) {
+    .story-wrapper {
+        flex-direction: column;
+    }
+    #story-container div[role="listitem"] {
+        flex-direction: column;
+        text-align: center;
+    }
+    #story-container img {
+        width: 60px;
+        height: 60px;
     }
 }

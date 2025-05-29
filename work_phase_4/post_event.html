@@ -1,0 +1,86 @@
+<!-- event.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Submit Event</title>
+    </head>
+    <body>
+        <h1>Submit New Event</h1>
+        <form id="event-form" enctype="multipart/form-data">
+            <!-- Event Name -->
+            <label for="event_name">Event Name:</label>
+            <input
+                type="text"
+                id="event_name"
+                name="event_name"
+                required
+            /><br /><br />
+
+            <!-- Location -->
+            <label for="location">Location:</label>
+            <input
+                type="text"
+                id="location"
+                name="location"
+                required
+            /><br /><br />
+
+            <!-- Organiser -->
+            <label for="organiser">Organiser:</label>
+            <input
+                type="text"
+                id="organiser"
+                name="organiser"
+                required
+            /><br /><br />
+
+            <!-- Event Type -->
+            <label for="event_type">Event Type:</label>
+            <input
+                type="text"
+                id="event_type"
+                name="event_type"
+                required
+            /><br /><br />
+
+            <!-- Description -->
+            <label for="description">Description:</label><br />
+            <textarea
+                id="description"
+                name="description"
+                rows="4"
+                cols="50"
+                required
+            ></textarea
+            ><br /><br />
+
+            <!-- Date & Time -->
+            <label for="date_time">Date & Time (YYYY-MM-DD HH:MM):</label>
+            <input
+                type="datetime-local"
+                id="date_time"
+                name="date_time"
+                required
+            /><br /><br />
+
+            <!-- Optional Photo -->
+            <label for="genericevent_photo">Upload Photo (optional):</label>
+            <input
+                type="file"
+                id="genericevent_photo"
+                name="genericevent_photo"
+                accept="image/*"
+            /><br /><br />
+
+            <!-- Submit -->
+            <button type="submit">Submit Event</button>
+        </form>
+
+        <p id="form-feedback"></p>
+
+        <!-- JS -->
+        <script type="module" src="js/post_event.js"></script>
+    </body>
+</html>

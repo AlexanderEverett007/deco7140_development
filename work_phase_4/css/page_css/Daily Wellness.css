@@ -1,0 +1,237 @@
+/* Smooth scroll behavior 平滑滚动效果 */
+html {
+    scroll-behavior: smooth; /* 启用 CSS 平滑滚动 */
+}
+
+/* Container for the entire section 整体容器 */
+.daily-wellness {
+    padding: 40px 20px;
+    background-color: #fefce8; /* 柔和浅黄色背景 */
+    text-align: center;
+}
+
+
+/* Sticky Notes container 平铺布局容器 */
+.sticky-notes-container {
+    display: flex;
+    flex-direction: row; /* 改为水平排列 */
+    justify-content: center; /* 水平居中 */
+    gap: 20px;
+    flex-wrap: wrap; /* 超出换行，响应式支持 */
+    margin-top: 20px;
+}
+
+/* Sticky Note 单个便签 */
+.sticky-note {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(to bottom, #fcd34d, #fbbf24); /* 渐变橙 */
+    color: #111;
+    font-weight: 600;
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.sticky-note:hover {
+    transform: scale(1.05); /* 悬停放大 */
+}
+
+/* Section 内容部分 */
+.wellness-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f0fdf4; /* 柔和绿色背景 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wellness-section h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #065f46;
+}
+
+/* Quotes 区域整体 */
+.quotes-section {
+    background-color: #f0fdf4; /* 柔和绿色背景 */
+}
+
+/* 单个语录卡片 */
+.quote-card {
+    background: #ffffff;
+    border-left: 5px solid #22c55e; /* 左边绿色线条 */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+/* 鼠标悬停放大效果 */
+.quote-card:hover {
+    transform: scale(1.02);
+}
+
+/* 语录文字 */
+.quote-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #065f46;
+    margin-bottom: 10px;
+}
+
+/* 作者文字 */
+.quote-author {
+    text-align: right;
+    font-weight: bold;
+    color: #4b5563;
+}
+
+/* Gratitude 展示区背景 */
+.gratitude-display-section {
+    background: linear-gradient(
+        to bottom right,
+        #fff7ed,
+        #fde68a
+    ); /* 橙黄渐变 */
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* 引导语 */
+.gratitude-intro {
+    font-size: 18px;
+    color: #92400e;
+    margin-bottom: 30px;
+}
+
+/* 单条卡片 */
+.gratitude-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-left: 6px solid #f59e0b;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    gap: 20px;
+    text-align: left;
+}
+
+/* 插图 */
+.gratitude-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* 内容区 */
+.gratitude-content {
+    flex: 1;
+}
+
+/* 内容文字 */
+.gratitude-text {
+    font-size: 17px;
+    color: #78350f;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* 作者信息 */
+.gratitude-author {
+    text-align: right;
+    font-weight: bold;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ✅ Container that holds all event cards */
+#events-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font 优化字体 */
+}
+
+/* ✅ Single event card style */
+.event-card {
+    background-color: #f9f9f9; /* Card background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 12px; /* Rounded corners 圆角 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow 阴影 */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ✅ Hover effect 悬停效果 */
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Event title */
+.event-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* ✅ Text content styling */
+.event-card p {
+    margin: 6px 0;
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+
+/* ✅ Optional image styling  */
+.event-card img {
+    display: block;
+    margin: 12px auto 0 auto;         /* 居中 */
+    max-width: 100%;                  /* 最大宽度为容器宽度 */
+    width: 100%;                      /* 强制拉伸为容器宽度（适配小屏） */
+    height: auto;                     /* 高度等比例缩放 */
+    border-radius: 8px;
+    box-sizing: border-box;           /* 避免 padding 或 border 导致溢出 */
+}
+
+
+/* ✅ Responsive spacing for smaller screens */
+@media (max-width: 600px) {
+    .event-card {
+        padding: 15px;
+    }
+
+    .event-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .event-card p {
+        font-size: 0.9rem;
+    }
+}

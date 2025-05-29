@@ -54,61 +54,143 @@
             </div>
         </nav>
 
+        <!-- ========================
+     Community Page Header Section — 社区顶部标题区域
+     ======================== -->
+        <section
+            class="community-header slide-in-left"
+            aria-labelledby="community-heading"
+        >
+            <div class="community-box">
+                <!-- Small container box — 小容器包裹内容 -->
+                <h1 id="community-heading">👥 Community</h1>
+                <p>
+                    Welcome to the <strong>MindSpace Community</strong> – a
+                    space where you can connect with others, ask questions,
+                    share your experiences, and support each other on your
+                    journey to mental wellness. You're not alone here. 💬
+                </p>
+            </div>
+        </section>
+
         <main>
-            <section class="question-form" aria-labelledby="question-heading">
-                <h2 id="question-heading">💬 Question Forums</h2>
+            <!-- ============================
+     Share Your Story Section — 用户提交 + 展示模块
+     ============================ -->
+            <section id="share-story" aria-labelledby="story-heading">
+                <h2 id="story-heading">📢 Share Your Story</h2>
 
-                <form id="question-form" class="question-form">
-                    <label for="name-input" class="visually-hidden"
-                        >Your Name</label
-                    >
-                    <input
-                        type="text"
-                        id="name-input"
-                        name="product_name"
-                        placeholder="Your Name"
-                        aria-label="Your Name"
-                        required
-                    />
+                <!-- ===== 提交表单区域 ===== -->
+                <div class="story-wrapper">
+                    <form id="community-form" enctype="multipart/form-data">
+                        <label for="name">Your Name *</label>
+                        <input type="text" name="name" id="name" required />
 
-                    <label for="email-input" class="visually-hidden"
-                        >Your Email</label
-                    >
-                    <input
-                        type="email"
-                        id="email-input"
-                        name="product_owner"
-                        placeholder="Your Email"
-                        aria-label="Your Email"
-                        required
-                    />
+                        <label for="email">Your Email *</label>
+                        <input type="email" name="email" id="email" required />
 
-                    <label for="message-input" class="visually-hidden"
-                        >Your Message</label
-                    >
-                    <textarea
-                        id="message-input"
-                        name="product_description"
-                        rows="3"
-                        placeholder="Type your question here..."
-                        aria-label="Your Message"
-                        required
-                    ></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="4"
+                        ></textarea>
 
-                    <button type="submit" aria-label="Submit your question">
-                        Submit
-                    </button>
-                    <p
-                        id="form-feedback"
-                        role="alert"
-                        aria-live="polite"
-                        style="margin-top: 10px"
-                    ></p>
-                </form>
+                        <label for="photo">Upload Photo</label>
+                        <input
+                            type="file"
+                            name="photo"
+                            id="photo"
+                            accept="image/*"
+                        />
+
+                        <button type="submit">Submit</button>
+                    </form>
+
+                    <!-- ===== 用户留言展示区 ===== -->
+                    <div id="story-container" role="list">
+                        <!-- JS 会动态插入故事卡片 -->
+                    </div>
+                </div>
+                <p id="form-feedback" aria-live="polite"></p>
+            </section>
+
+
+
+
+
+
+
+            <!-- ===== Forum论坛 ===== -->
+            <section class="chat-section">
+            <h2>💬 Share a Thought</h2>
+            <form id="chat-form" enctype="multipart/form-data">
+                <!-- Person Name -->
+                <label for="person_name">Your Name:</label><br />
+                <input
+                    type="text"
+                    id="person_name"
+                    name="person_name"
+                    required
+                /><br /><br />
+
+                <!-- Post Title -->
+                <label for="chat_post_title">Post Title:</label><br />
+                <input
+                    type="text"
+                    id="chat_post_title"
+                    name="chat_post_title"
+                    required
+                /><br /><br />
+
+                <!-- Post Content -->
+                <label for="chat_post_content">Message:</label><br />
+                <textarea
+                    id="chat_post_content"
+                    name="chat_post_content"
+                    rows="4"
+                    required
+                ></textarea
+                ><br /><br />
+
+                <button type="submit">Submit Post</button>
+            </form>
+
+            <p id="form-feedback"></p>
+            </section>
+            
+            
+            
+            
+            
+            
+            
+                <!-- mood-tracker -->
+                <!-- mood-tracker -->
+            <section id="mood-tracker" class="mood-container">
+                <div class="mood-header">
+                    <h3>Mood Tracker</h3>
+                    <p class="mood-instruction">How are you feeling today?</p>
+                </div>
+
+                <div class="mood-options">
+                    <button class="mood-option">😊 Happy</button>
+                    <button class="mood-option">😌 Calm</button>
+                    <button class="mood-option">🤩 Excited</button>
+                    <button class="mood-option">😐 Okay</button>
+                    <button class="mood-option">😩 Tired</button>
+                </div>
+
+                <p class="mood-note">
+                    It's okay to have ups and downs. Every feeling matters.
+                </p>
+                <p id="mood-feedback" class="mood-feedback"></p>
+                <!-- 👈 反馈文本显示区域 -->
             </section>
         </main>
         <!-- 引入 JS 脚本 -->
-        <script type="module" src="js/nav.js"></script>
+        <script type="module" src="js/modules/nav.js"></script>
         <script type="module" src="js/community.js"></script>
+        <script type="module" src="js/discussion.js"></script>
     </body>
 </html>
