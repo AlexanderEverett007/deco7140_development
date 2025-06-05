@@ -19,7 +19,7 @@ async function handleSubmit(event) {
 
     feedback.textContent = "Submitting...";
 
-    const { success, data } = await postFormData(form, API_URL, HEADERS);
+    const { success, data } = await postFormData(form, API_URL, HEADERS); // await means that 等待 postFormData 完成，并从中解构出 success 和 data
 
     if (success) {
         feedback.textContent = data.message;
@@ -46,15 +46,16 @@ async function loadStories() {
         .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
         .slice(0, 3);
 
+        //遍历每一条数据并创建展示结构
     latestStories.forEach((item) => {
-        const card = document.createElement("div");
-        card.setAttribute("role", "listitem");
+        const card = document.createElement("div");// 创建卡片容器
+        card.setAttribute("role", "listitem"); // 设置无障碍 role 属性
 
         if (item.photo) {
             const img = document.createElement("img");
-            img.src = item.photo;
+            img.src = item.photo;// 图片地址
             img.alt = `${item.name}'s photo`;
-            card.appendChild(img);
+            card.appendChild(img); // 加入到卡片中
         }
 
         const name = document.createElement("p");
@@ -62,7 +63,7 @@ async function loadStories() {
         card.appendChild(name);
 
         const time = document.createElement("p");
-        time.textContent = new Date(item.created_at).toLocaleString();
+        time.textContent = new Date(item.created_at).toLocaleString(); //Format to local time 格式化为本地时间
         card.appendChild(time);
 
         if (item.message?.trim()) {
@@ -71,7 +72,7 @@ async function loadStories() {
             card.appendChild(message);
         }
 
-        container.appendChild(card);
+        container.appendChild(card); //Add the entire card to the page container把整个卡片加入页面容器中
     });
 }
 
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.add("selected");
 
             // 显示反馈文字
-            const feeling = btn.textContent.trim(); // e.g., 😊 Happy
+            const feeling = btn.textContent.trim(); // e.g., 😊 Happy  //trim means删除字符串开头和结尾的空格、换行符、Tab 等不可见字符。
             feedback.textContent = `You are feeling ${feeling} today.`;
         });
     });

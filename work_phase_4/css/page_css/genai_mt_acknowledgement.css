@@ -1,46 +1,76 @@
-/* GenAI 页面背景和容器样式 */
-.genai-section {
-    background: linear-gradient(
-        to bottom right,
-        #d0f5f2,
-        #e6f7f4
-    ); /* 柔和蓝绿色渐变背景 */
-    padding: 60px 20px;
-    min-height: 100vh;
+body {
+    font-family: Arial, sans-serif; /* English: Fallback system font family */ /* 中文: 系统字体备用 */
+    line-height: 1.6; /* English: Improve readability with line height */ /* 中文: 提高可读性，设置行高 */
+    background-color: #e8f5e9; /* English: Very light background for contrast */ /* 中文: 非常浅的背景色以提高对比度 */
+    color: #333; /* English: Dark gray text for comfortable reading */ /* 中文: 深灰色文字，舒适阅读 */
+    padding: 0 1rem;  /* 上下 padding 为 0，左右保持 1rem */ 
 }
 
-.genai-container {
-    background-color: #fefefe;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    font-family: "Segoe UI", sans-serif;
-    line-height: 1.7;
+/* English: Container to center content and set max width */
+/* 中文: 用于居中内容并设置最大宽度的容器 */
+.content-container {
+    max-width: 800px; /* English: Limit width to 800px for larger screens */ /* 中文: 对于较大屏幕，将宽度限制为800px */
+    margin: 0 auto; /* English: Center horizontally */ /* 中文: 水平居中 */
+    padding: 1rem; /* English: Padding around content */ /* 中文: 内容周围的内边距 */
 }
 
-.genai-container h2 {
+/* English: Page header styling */
+/* 中文: 页面头部样式 */
+.site-header {
+    text-align: center; /* English: Center the header text */ /* 中文: 标题文字居中 */
+    margin-bottom: 1.5rem; /* English: Space below the header */ /* 中文: 标题下方间距 */
+}
+
+.site-header h1 {
+    font-size: 1.75rem; /* English: Slightly larger font for main title */ /* 中文: 主标题稍大字体 */
+    color: #2c3e50; /* English: Dark blue-gray color for emphasis */ /* 中文: 深蓝灰色以强调 */
+}
+
+/* English: Report section styling */
+/* 中文: 报告章节样式 */
+.report-section {
+    margin-bottom: 1.5rem; /* English: Space between sections */ /* 中文: 章节之间的间距 */
+}
+
+.report-section h2 {
+    font-size: 1.25rem; /* English: Subheading size */ /* 中文: 副标题大小 */
+    margin-bottom: 0.5rem; /* English: Space below subheading */ /* 中文: 副标题下方间距 */
+    color: #34495e; /* English: Slightly darker shade for hierarchy */ /* 中文: 层次感的深色 */
+}
+
+.report-section p {
+    margin-bottom: 1rem; /* English: Paragraph spacing */ /* 中文: 段落间距 */
+    text-align: justify; /* English: Justified text for report-like appearance */ /* 中文: 对齐文本，呈现报告风格 */
+}
+
+/* English: Footer styling */
+/* 中文: 页脚样式 */
+.site-footer {
+    text-align: center; /* English: Center the footer text */ /* 中文: 页脚文字居中 */
+    margin-top: 2rem; /* English: Space above the footer */ /* 中文: 页脚上方间距 */
+    font-size: 0.9rem; /* English: Slightly smaller font for footer */ /* 中文: 页脚使用稍小字体 */
+    color: #7f8c8d; /* English: Muted gray color for footer text */ /* 中文: 页脚文字的柔和灰色 */
+}
+
+/* English: Responsive typography adjustments for larger screens */
+/* 中文: 更大屏幕的响应式排版调整 */
+@media (min-width: 600px) {
+    body {
+        padding: 2rem; /* English: Increase padding on larger screens */ /* 中文: 在更大屏幕上增加内边距 */
+    }
+    .site-header h1 {
+        font-size: 2rem; /* English: Grow main title size */ /* 中文: 增大主标题字体 */
+    }
+    .report-section h2 {
+        font-size: 1.5rem; /* English: Grow subheading size */ /* 中文: 增大副标题字体 */
+    }
+}
+
+/* Footer */
+.footer {
     text-align: center;
-    color: #00796b;
-    margin-bottom: 25px;
-}
-
-.genai-container h3 {
-    color: #004d40;
-    margin-top: 30px;
-}
-
-.genai-container ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-.genai-container li {
-    margin-bottom: 10px;
-}
-
-.genai-container p {
-    margin-top: 15px;
-    color: #333;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 3rem;
 }

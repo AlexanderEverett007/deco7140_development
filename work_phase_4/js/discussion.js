@@ -1,3 +1,7 @@
+import { postFormData } from "./modules/postFormData.js"; // 你已有的 POST 模块
+import { fetchGetData } from "./modules/getData.js"; // 你已有的 GET 模块
+
+
 // js/genericchatForm.js
 
 const API_URL =

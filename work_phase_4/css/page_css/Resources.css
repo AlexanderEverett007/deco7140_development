@@ -162,13 +162,13 @@ body {
 /* Icon style 图标样式 */
 .meditation-icon {
     font-size: 2.5rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent shrinking — 不允许该元素在缩小时变小（固定宽度） */
     margin-top: 0.5rem;
 }
 
 /* Text and audio container 内容与播放器容器 */
 .meditation-content {
-    flex: 1;
+    flex: 1; /* Allow to grow and fill available space — 让该元素在弹性容器中自动填满可用空间 */
 }
 
 .meditation-content h3 {

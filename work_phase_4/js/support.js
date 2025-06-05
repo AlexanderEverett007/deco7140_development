@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// 模拟 AI 回复逻辑
+// Simulated AI response logic 模拟 AI 回复逻辑
 function getBotReply(message) {
     const msg = message.toLowerCase();
     if (msg.includes("stress"))
@@ -101,25 +101,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //FAQS
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // Get all question buttons — 获取所有 FAQ 问题按钮
     const buttons = document.querySelectorAll(".faq-question");
 
-    buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            const expanded = btn.getAttribute("aria-expanded") === "true";
-            const targetId = btn.getAttribute("aria-controls");
-            const answer = document.getElementById(targetId);
-            const icon = btn.querySelector(".faq-icon");
+    buttons.forEach((btn) => {   // Loop through each question button — 遍历每一个按钮
+        btn.addEventListener("click", () => {  // Click event for expanding/collapsing — 点击事件：展开或收起答案
+            const expanded = btn.getAttribute("aria-expanded") === "true"; // Check if currently expanded — 检查当前是否处于展开状态
+            const targetId = btn.getAttribute("aria-controls");  // Get the ID of the answer container — 获取对应答案区域的 ID
+            const answer = document.getElementById(targetId); // Get the actual answer element — 获取答案元素
+            const icon = btn.querySelector(".faq-icon"); // Get the arrow icon inside the button — 获取按钮中的图标元素
 
-            btn.setAttribute("aria-expanded", String(!expanded));
-            answer.hidden = expanded;
-            icon.textContent = expanded ? "▶" : "▼";
+            btn.setAttribute("aria-expanded", String(!expanded)); // Toggle expanded attribute — 切换 aria-expanded 属性值
+            answer.hidden = expanded; // Show or hide the answer — 显示或隐藏答案
+            icon.textContent = expanded ? "▶" : "▼"; // Change icon direction — 切换图标（展开用 ▼，收起用 ►）
         });
 
-        btn.addEventListener("keydown", (e) => {
-            if (e.key === " " || e.key === "Enter") {
-                e.preventDefault();
-                btn.click();
+        btn.addEventListener("keydown", (e) => { // Keyboard support for accessibility — 添加键盘支持（可访问性增强）
+            if (e.key === " " || e.key === "Enter") { // Trigger if space or enter is pressed — 如果按下空格或回车键
+                e.preventDefault(); // Prevent default scrolling — 阻止默认滚动行为
+                btn.click(); // Simulate click — 模拟点击事件
             }
         });
     });

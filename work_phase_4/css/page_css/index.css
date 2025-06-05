@@ -1,75 +1,9 @@
-/* === Full-screen Hero Section with Image Background === */
-.hero-header {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding-left: 6vw; /* 左侧对齐 */
-}
-
-/* === Overlay Text Area with White Panel === */
-.hero-overlay {
-    background-color: rgba(255, 255, 255, 0.9); /* 半透明白底 */
-    padding: 3rem 2rem;
-    border-top-right-radius: 50px;
-    max-width: 480px;
-    animation: fadeSlideIn 1s ease-out forwards;
-    opacity: 0;
-    transform: translateX(-40px);
-    margin-top: -20rem; /* Move upward 向上移动 */
-}
-
-.hero-overlay h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-}
-
-.hero-overlay p {
-    font-size: 1.125rem;
-    color: var(--color-text-light);
-    line-height: 1.6;
-}
-
-/* === Animation for intro === */
-@keyframes fadeSlideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* === Responsive Tuning === */
-@media (max-width: 768px) {
-    .hero-header {
-        padding-left: 1rem;
-        justify-content: center;
-    }
-
-    .hero-overlay {
-        max-width: 90%;
-        padding: 2rem 1.5rem;
-    }
-
-    .hero-overlay h1 {
-        font-size: 2rem;
-    }
-
-    .hero-overlay p {
-        font-size: 1rem;
-    }
-}
-
 /* Background image section 背景图区域 */
 .hero-background {
     position: relative;
     width: 100%;
-    height: 92.5vh;
-    overflow: hidden;
+    height: 92.5vh; /* 92.5% of viewport height — 占浏览器视口高度的92.5% */
+    overflow: hidden; /* Hide anything spilling outside — 隐藏超出容器的内容（例如背景图溢出） */
 }
 
 .hero-bg-img {
@@ -81,6 +15,9 @@
     object-fit: cover; /* Stretch & crop image 填充并裁切图片 */
     z-index: -1; /* Push image behind content 图片置于底层 */
 }
+
+
+
 
 /* === Quick Access Container Styles 快速入口模块样式 === */
 .quick-access-card {
@@ -118,7 +55,7 @@
     background-color: var(--color-support); /* Soft green 柔和绿色 */
     border: none;
     border-radius: 20px;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.2rem; /* Vertical & horizontal space 内边距（上下 0.6rem，左右 1.2rem） */
     font-size: 1rem;
     color: #333;
     cursor: pointer;
@@ -130,3 +67,74 @@
 .quick-btn:hover {
     background-color: #9ccc65; /* Hover green 悬停变色 */
 }
+
+
+
+/* === Full-screen Hero Section with Image Background === */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 6vw; /* 左侧对齐 */
+}
+
+/* === Overlay Text Area with White Panel === */
+.hero-overlay {
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明白底 */
+    padding: 3rem 2rem;
+    border-top-right-radius: 50px;
+    max-width: 480px;
+    animation: fadeSlideIn 1s ease-out forwards;/* Apply fadeSlideIn animation — 应用名为 fadeSlideIn 的动画，持续时间：1 秒；动画节奏：ease-out（先快后慢；forwards：动画结束后保持最终状态 */
+    opacity: 0; /* Initial opacity — 初始透明度设为 0（完全透明） */
+    transform: translateX(-40px); /* Initial position — 初始位置向左偏移 40px，实现“滑入”效果 */
+    margin-top: -20rem; /* Move upward 向上移动 */
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem; /* Bottom outer spacing — 元素底部的外边距为1rem（约16px） */
+}
+
+.hero-overlay p {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    line-height: 1.6; /* Line spacing — 设置行高为字体大小的1.6倍（提高可读性） */
+}
+
+/* === Animation for intro === */
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide to original position — 滑动到原始位置 */
+    }
+}
+
+/* === Responsive Tuning === */
+@media (max-width: 768px) {
+    .hero-header {
+        padding-left: 1rem;
+        justify-content: center;
+    }
+
+    .hero-overlay {
+        max-width: 90%;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+}
+
+
+
